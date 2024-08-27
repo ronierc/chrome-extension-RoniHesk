@@ -41,3 +41,31 @@ document.querySelectorAll('table.white td:nth-child(11)').forEach((item) => { it
 document.querySelectorAll('table.white th:nth-child(11)').forEach((item) => { item.remove() }); //Remove coluna tipo chamado
 
 }// END If abaixo valida se esta na home.
+
+// Copia numero da solicitação para o header
+if (document.getElementById('area_solicitacao') !== null){
+  let numero = document.querySelector('#area_solicitacao').children[0].innerText.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+
+  document.querySelector('title').innerText = 'SL: '+ numero + ' - ' + document.querySelector('.enclosing tbody').children[1].children[0].children[0].children[0].innerText.replace('(Implantação)', '');
+
+  // Cria o icone
+  let linkTag = document.createElement('link');
+  // Define os atributos da tag
+  linkTag.rel = 'icon';
+  linkTag.href = 'https://img.icons8.com/?size=80&id=UmF1v-dFKf1k&format=png'; // Substitua pelo caminho do seu ícone
+  // Adiciona a tag <link> ao <head> do documento
+  document.head.appendChild(linkTag);
+
+}
+if (document.getElementById('area_solicitacao') == null){
+  document.querySelector('title').innerText = document.querySelector('.enclosing tbody').children[1].children[0].children[0].children[0].innerText.replace('(Implantação)', '');
+  
+  // Cria o icone
+  let linkTag = document.createElement('link');
+  // Define os atributos da tag
+  linkTag.rel = 'icon';
+  linkTag.href = 'https://img.icons8.com/?size=80&id=wsA6b0gWRtPP&format=png'; // Substitua pelo caminho do seu ícone
+  // Adiciona a tag <link> ao <head> do documento
+  document.head.appendChild(linkTag);
+}
+

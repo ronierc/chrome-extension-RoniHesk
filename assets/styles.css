@@ -28,7 +28,12 @@
 /**{direction: rtl;}*/
 
 #barrabuttom, .online, #recado_orasystems, hr{ display: none; }
-
+a {
+    color: #68b9ff !important;
+}
+a:hover, a:focus {
+    color: var(--orange) !important;
+}
 body {
     background: var(--bgPrimary) !important;
     border-color: var(--border) !important;

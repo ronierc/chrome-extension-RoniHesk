@@ -74,6 +74,9 @@ function substituirCores() {
           corDaFonte === 'rgb(0, 0, 0)' || corDaFonte === '#000000') {
           elemento.style.color = 'var(--fontColor)';//'#cfcfcf';
       }
+      if (corDaFonte === 'rgb(0, 0, 153)' || corDaFonte === '#000099') {
+          elemento.style.color = '#68b9ff';//'#cfcfcf';
+      }
   }
   console.log(elementos)
 }
