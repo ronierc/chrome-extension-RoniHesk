@@ -12,8 +12,11 @@ if ((document.getElementById('cke_message') == null) && document.querySelector('
   document.querySelector('select[name="sel_suporte"]').parentElement.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
 
   //Captura a div buscar chamados e já remove
+    document.querySelector('#topSubmit2').style.display = 'none'
+  document.querySelector('#divShow2').style.display = 'block'
   const achat = document.querySelector('form[name="findby"]').parentElement.innerHTML;
   document.querySelector('form[name="findby"]').parentElement.parentElement.parentElement.parentElement.style.display = 'none';
+
 
   //Cria botão no menu com os buscadores
   document.querySelector('#groupMenu').innerHTML += `

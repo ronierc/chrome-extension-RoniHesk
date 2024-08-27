@@ -32,7 +32,7 @@ a {
     color: #68b9ff !important;
 }
 a:hover, a:focus {
-    color: var(--orange) !important;
+    color: var(--orange) !important ;
 }
 body {
     background: var(--bgPrimary) !important;

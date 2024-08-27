@@ -48,7 +48,7 @@ if (document.getElementById('area_solicitacao') !== null){
 
   document.querySelector('title').innerText = 'SL: '+ numero + ' - ' + document.querySelector('.enclosing tbody').children[1].children[0].children[0].children[0].innerText.replace('(Implantação)', '');
 
-  // Cria o icone
+  // Cria o icone 
   let linkTag = document.createElement('link');
   // Define os atributos da tag
   linkTag.rel = 'icon';
@@ -59,7 +59,7 @@ if (document.getElementById('area_solicitacao') !== null){
 }
 if (document.getElementById('area_solicitacao') == null){
   document.querySelector('title').innerText = document.querySelector('.enclosing tbody').children[1].children[0].children[0].children[0].innerText.replace('(Implantação)', '');
-  
+
   // Cria o icone
   let linkTag = document.createElement('link');
   // Define os atributos da tag
