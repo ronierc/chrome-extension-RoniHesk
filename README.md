@@ -7,22 +7,24 @@ Para usar basta fazer o download da mesma no [LINK](https://github.com/ronierc/R
 # Modo de uso
 
 -Exporte o arquivo .rar em uma pasta. (As futuras atualizações usaram essa mesma pasta)
-![image](https://github.com/ronierc/RoniHesk/assets/17727280/354e3760-f710-4cd7-a98b-cddf71ca5d2b)
+![image](https://github.com/user-attachments/assets/d80e721a-d693-4344-aae7-b4877be07f6d)
 
 -No navegador acesse o gerenciador de extenções: (Testado já no Chrome e Opera)
-![image](https://github.com/ronierc/RoniHesk/assets/17727280/2f0f5587-33c3-405a-97a7-20a319f755df)
+![image](https://github.com/user-attachments/assets/6e8bb83d-2d8a-4a66-985d-415cb6415ab3)
 
 -Ative o **Modo Desenvolvedor**, e clique em carregar:
-![image](https://github.com/ronierc/RoniHesk/assets/17727280/77566a3c-9708-4c61-8903-d484ed76d7ad)
+![image](https://github.com/user-attachments/assets/e0e2a858-627c-4b9a-bb5a-63c8cc3f20bf)
 
 -No diretório raiz, clique em **Selecionar Pasta**:
-![image](https://github.com/ronierc/RoniHesk/assets/17727280/1b406c15-6da2-487d-aa94-818d271fdecd)
+![image](https://github.com/user-attachments/assets/3b97280d-5351-48cb-b85f-83a92c7cb355)
 
 -Com isso a Extensão é carregada e já estará funcionando:
-![image](https://github.com/ronierc/RoniHesk/assets/17727280/573d0710-0063-45a6-b92f-3ac604e32541)
+![image](https://github.com/user-attachments/assets/3803281b-736f-4397-a314-34bde70631b4)
+
 
 # Antes
-![image](https://github.com/ronierc/RoniHesk/assets/17727280/e7ff019e-e59a-4b46-a714-85de45eeea85)
+![image](https://github.com/user-attachments/assets/483b059b-95bb-4624-ad8d-a451dc86d81c)
 
 # Depois
-![image](https://github.com/ronierc/RoniHesk/assets/17727280/1f73960a-232b-4c32-ada3-d377bd222a6d)
+![image](https://github.com/user-attachments/assets/0c720e94-e0fc-47e1-a28e-b9af2ce8bcc1)
+
