@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+:root {
+    --bgPrimary: #191f31;
+    --bgPrimaryRGB: 72,85,113;
+    --bgSecondary: #1f2639;
+    --bgTertiary: #4a5571;
+    --corBtn :#31d2f2;
+    --corBtnHover :#017586;
+    --bgComent: #6272A4;
+    --fontColor: rgba(255, 255, 255, 0.8);
+    --fontColor2: #9B9B9B;
+    --fontColorHover: #495057;
+    --fontFamily: 'Nunito', sans-serif;
+    --border: #4a5571;
+    --purple: #BD93F9;
+    --purpleRgb: 189, 147, 249;
+    --cyan: #8BE9FD;
+    --orange: #FFB86C;
+    --blue: #2d6ca2;
+    --green: #50FA7B;
+    --red: #FF5555;
+}
+
+*::-webkit-scrollbar-track { background-color: var(--bgTertiary); }
+*::-webkit-scrollbar { width: 5px; background: var(--bgTertiary); }
+*::-webkit-scrollbar-thumb { background: var(--purple); }
+*::-webkit-scrollbar-corner { background: var(--purple); }
+
+html body div.container-fluid {
+    padding: 0 !important;
+}
+.row{
+    margin: 0 !important;
+}
+.col-md-12{
+    margin: 0 !important;padding: 0 !important;
+}
+.table-top{
+	/*background-color: #c14242 !important;*/
+}
+.table {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-top: 0 !important;
+}
+.table > thead > tr > td.borda21, .table > tbody > tr > td.borda21, .table > tfoot > tr > td.borda21, .table > thead > tr > th.borda21, .table > tbody > tr > th.borda21, .table > tfoot > tr > th.borda21, .table > thead > tr.borda21 > td, .table > tbody > tr.borda21 > td, .table > tfoot > tr.borda21 > td, .table > thead > tr.borda21 > th, .table > tbody > tr.borda21 > th, .table > tfoot > tr.borda21 > th {
+    border-bottom-width: 1px !important;
+}
+table .td-left{
+    display: flex;
+    justify-content: space-between;
+}
+.table > thead > tr > th {
+    border-bottom: 1px solid #000 !important;
+}

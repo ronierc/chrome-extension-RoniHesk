@@ -19,20 +19,30 @@
     --blue: #2d6ca2;
     --green: #50FA7B;
     --red: #FF5555;
+    --pxBarra: 5px;
 }
 
 *::-webkit-scrollbar-track { background-color: var(--bgTertiary); }
-*::-webkit-scrollbar { width: 5px; background: var(--bgTertiary); }
+*::-webkit-scrollbar { width: var(--pxBarra); background: var(--bgTertiary); }
 *::-webkit-scrollbar-thumb { background: var(--purple); }
 *::-webkit-scrollbar-corner { background: var(--purple); }
 /**{direction: rtl;}*/
 
+.texto-data div{ /*Flexa solicitação*/
+    color: var(--bgSecondary) !important ;
+}
+
 #barrabuttom, .online, #recado_orasystems, hr{ display: none; }
+#tktTable hr{ 
+    display: block;
+    margin: 10px 0;
+    border-color: var(--purple);
+}
 a {
     color: #68b9ff !important;
 }
 a:hover, a:focus {
-    color: var(--orange) !important;
+    color: var(--orange) !important ;
 }
 body {
     background: var(--bgPrimary) !important;
@@ -126,6 +136,21 @@ table.enclosing{
     background: var(--bgPrimary) !important;
 }
 
+table.enclosing .marker{
+    background: #910a4e ;
+}
+table.enclosing code{
+    color: #ff48b6 !important;
+    background-color: #242a3d !important;
+}
+.ticketrow div div{ /*Div de campo de codigo*/
+    background-color: #191f31 !important;
+    border-color: #bd93f9 !important;
+} .ticketalt div div {
+    background-color: #4a5571 !important;
+    border-color: #bd93f9 !important;
+}
+
 table.header, .navbar-collapse{
     background: var(--bgSecondary) !important;
     color: var(--fontColor) !important;
@@ -142,6 +167,18 @@ td.notes{
     background: #ed008e !important;
     color: var(--fontColor) !important;
     border-color: #910a4e !important;
+}
+#setasMenu{
+    display: flex !important;
+}
+.chMenu{
+    display: grid;
+    align-items: center;
+    margin-left: 10px;
+    border: 1px solid #4a5571;
+    border-radius: 4px;
+    padding: 0 10px;
+    background: var(--bgTertiary);
 }
 .inputMenu{
     height: 35px !important;
@@ -225,6 +262,11 @@ ul.tabs li a{
 }
 ul.tabs li.selected a{
     background: var(--bgTertiary) !important;
+}
+
+.copiado {
+    background-color: var(--green) !important;
+    transition: background-color 0.3s ease;
 }
 
 
