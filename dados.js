@@ -25,7 +25,9 @@ const analistasData = [
   { id: 818, nome: 'Alisson', setor: 'INTERNO' },
   { id: 1031, nome: 'Leonardo', setor: 'INTERNO' },
   { id: 1033, nome: 'Batista', setor: 'INTERNO' },
-  { id: 828, nome: 'Geovanne', setor: 'INTERNO' }
+  { id: 828, nome: 'Geovanne', setor: 'INTERNO' },
+  { id: 1036, nome: 'Vicente', setor: 'INTERNO' },
+  { id: 1037, nome: 'Neves', setor: 'INTERNO' }
 ];
 
 const linksExternos = [

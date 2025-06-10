@@ -1,5 +1,8 @@
 //If abaixo valida se esta na home. 
 if ((document.getElementById('cke_message') == null) && document.querySelector('form[name="showt"]') !== null){
+
+  //Remove a o~pção altera todos os chamados para resolvido
+  document.querySelector('select[name="a"]').parentElement.parentElement.style.display = 'none';
   
   document.querySelectorAll('br').forEach((item) => { item.remove(); });
 
@@ -30,7 +33,6 @@ if ((document.getElementById('cke_message') == null) && document.querySelector('
         <li><a id="achaTicket" href="#">Achar um ticket</a></li>
       </ul>
     </div>
-    <button class="btn btn-default inputMenu" id="iframeChamados" style="padding: 6px 12px;font-size: 14px;">Chamados</button>
   `;
 
   //Modal para filtrar os chamados exibidos
@@ -39,14 +41,6 @@ if ((document.getElementById('cke_message') == null) && document.querySelector('
     <img id="closeJumbotron" src="https://img.icons8.com/?size=256&id=rmf1Fvj5nBib&format=png"/>
     <div></div>
   </div>
-<div class="jumbotron jumbHelp" id="jbChamados" style="padding:10px;display: none;overflow: hidden;">
-  <img id="closeJumboChamados" src="https://img.icons8.com/?size=256&id=rmf1Fvj5nBib&format=png"/>
-  <div>
-    <iframe id="iChamados" src="https://suporte.suprasys.com.br/.chamados/" width="100%" style="height:80vh; border:none;">
-      <p>Your browser does not support iframes.</p>
-    </iframe>
-  </div>
-</div>
 `;
 
 document.getElementById('closeJumbotron').addEventListener('click', () => {
@@ -65,45 +59,7 @@ document.getElementById('achaTicket').addEventListener('click', () => {
   document.querySelector('#jbBusca div').innerHTML = achat;
 });
 
-//Incluir iframe do .chamados 
-document.querySelector('.online').innerHTML += `
-`;
-//Jumbotron de chamados
-setTimeout(() => {
-document.querySelector('#iframeChamados').addEventListener('click', () => {
-  document.querySelector('#jbChamados').style.display = 'block';
-});
-document.getElementById('closeJumboChamados').addEventListener('click', () => {
-  document.querySelector('#jbChamados').style.display = 'none';
-});
-}, 300);
-
-if ((document.querySelector('#iChamados')) !== null){
-  setInterval(() => {
-    document.querySelector('#iChamados').contentWindow.document.querySelector('body').innerHTML += `
-    <style>
-
-      table{
-        font-size: .9em !important;
-      }
-      .col-md-12{
-        padding: 0 !important;
-      }
-      .row{
-        width:100% !important;
-        margin:0 !important;
-      }
-
-      *::-webkit-scrollbar-track { background-color: #4a5571; }
-      *::-webkit-scrollbar { width: 5px; background: #4a5571; }
-      *::-webkit-scrollbar-thumb { background: #BD93F9; }
-      *::-webkit-scrollbar-corner { background: #BD93F9; }
-    </style>`;
-  }, "3000");
-  
-
-}
-
 
 
 }// END If abaixo valida se esta na home.
+

@@ -46,11 +46,19 @@ document.querySelectorAll('table.header table td a').forEach((item) => {
   }
 });
 
+//Menu com os itens que já tinha
 var listaMenu = '<ul class="dropdown-menu">';
 menuLinks.forEach(function(item) {
     listaMenu += `<li><a href="${item.link}">${item.nome}</a></li>`;
 });
 listaMenu += '</ul>';
+//Menu links externos
+var listaMenuExt = '<ul class="dropdown-menu">';
+linksExternos.forEach(function(item) {
+    listaMenuExt += `<li><a href="${item.link}" target="_blank">${item.nome}</a></li>`;
+});
+listaMenuExt += '</ul>';
+
 
 //Cria o input de busca de chamado e top button
 document.querySelector('table.header table tbody tr').innerHTML += `
@@ -61,6 +69,12 @@ document.querySelector('table.header table tbody tr').innerHTML += `
         Menu <span class="caret"></span>
       </button>    
         ${listaMenu}
+    </div>
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default inputMenu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Links <span class="caret"></span>
+      </button>    
+        ${listaMenuExt}
     </div>
     <div class="btn-group" role="group">
       <button type="button" class="btn btn-default inputMenu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -84,7 +98,7 @@ document.querySelector('table.header table tbody tr').innerHTML += `
     </div>
   </form>
 </td>
-<td>
+<td id="setasMenu">
   <div class="btn-group" role="group" style="display: flex;">
       <a type="button" class="btn btn-default inputMenu" href="#top" style="padding: 2px;" onclick="$('html, body').animate({scrollTop: 0}, 'slow');"><img src="https://img.icons8.com/?size=256&id=NCPZ7hqe16dx&format=png" width="30px"/></a>
       <a type="button" class="btn btn-default inputMenu" href="#down" style="padding: 2px;" onclick="if ($('#tktTable').length > 0) {  $('html, body').animate({scrollTop: $('#tktTable table tr:last').offset().top}, 'slow'); } else { $('html, body').animate({scrollTop: $(document).height()}, 'slow'); }"><img src="https://img.icons8.com/?size=256&id=NCPZ7hqe16dx&format=png" width="30px" style="transform: rotate(180deg);"/></a>
@@ -93,3 +107,8 @@ document.querySelector('table.header table tbody tr').innerHTML += `
 `;
 
 
+// Seleciona o elemento :root
+const root = document.documentElement;
+
+// Define o novo valor da variável
+root.style.setProperty('--pxBarra', configUser.tamanhoBarra);

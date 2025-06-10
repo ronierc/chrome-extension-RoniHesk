@@ -77,8 +77,11 @@ function substituirCores() {
       if (corDaFonte === 'rgb(0, 0, 153)' || corDaFonte === '#000099') {
           elemento.style.color = '#68b9ff';//'#cfcfcf';
       }
+      if (corDaFonte === 'rgb(238 238 238)' || corDaFonte === '#EEEEEE') {
+          elemento.style.color = '#68b9ff';//'#cfcfcf';
+      }
   }
-  console.log(elementos)
+  // console.log(elementos)
 }
 
 
@@ -139,12 +142,20 @@ if (document.querySelector('#HeskMsg') !== null){
         background-color: #191f31;
         color: rgba(255, 255, 255, 0.6);
       }
+      .cke_editable div { /*Div de campo de codigo*/
+        background-color: #4a5571 !important;
+        border-color: #bd93f9 !important;
+      }
       *::-webkit-scrollbar-track { background-color: #4a5571; }
       *::-webkit-scrollbar { width: 5px; background: #4a5571; }
       *::-webkit-scrollbar-thumb { background:  #BD93F9; }
       *::-webkit-scrollbar-corner { background: #BD93F9; }
       .marker{
-        background: #BD93F9;
+        background: #910a4e ;
+      }
+      code{
+        color: #ff48b6 !important;
+        background-color: #242a3d !important;
       }
 
       .cke_panel_listItem a{
@@ -166,7 +177,9 @@ if (document.querySelector('#HeskMsg') !== null){
           *::-webkit-scrollbar { width: 5px; background: #4a5571; }
           *::-webkit-scrollbar-thumb { background:  #BD93F9; }
           *::-webkit-scrollbar-corner { background: #BD93F9; }
-          
+          .cke_panel_listItem.cke_selected a{
+            background-color: #1a1a1a !important;
+          }
           .cke_panel {
             border-color: var(--border) !important;
           }
@@ -183,6 +196,17 @@ if (document.querySelector('#HeskMsg') !== null){
           }
           #cke_69, #cke_70, #cke_84{
             display:none; 
+          }
+          .marker{
+            background: #910a4e ;
+          }
+          #cke_77 div {/*Div de campo de codigo*/
+              background-color: #4a5571 !important;
+              border-color: #bd93f9 !important;
+          }
+          code{
+            color: #ff48b6 !important;
+            background-color: #242a3d !important;
           }
         </style>`;
       });
