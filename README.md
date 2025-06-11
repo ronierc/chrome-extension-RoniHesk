@@ -1,8 +1,10 @@
 # RoniHesk
 
 Extensão desenvolvida para manipulação do Layout do site da supra.
+A extensão não executa update ou consultas, somente manipula o DOM com JavaScript.
 
 Para usar basta fazer o download da mesma no [LINK](https://github.com/ronierc/RoniHesk/blob/main/HelpExtensao.rar).
+Acompanhar ultimas atualizações [RELEASE NOTES](https://github.com/ronierc/RoniHesk/blob/main/RELEASE_NOTES.md).
 
 # Modo de uso
 
