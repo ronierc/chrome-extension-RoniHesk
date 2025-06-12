@@ -62,5 +62,16 @@ Versão 4.5
 3. Incluído dentro do chamado o link do chamado e SL para facilitar a copia.
 ![image](https://github.com/user-attachments/assets/cbe05042-525e-42b0-9686-6689f9cf178b)
 
-4. Incluído na Abertuda do Chamado e na Criação da Ficha um input de busca da empresa. (Facilitar na busca)
+3.1. Quando clicado para copiar agora a copia sera concatenada com o TITLE da página:
+![image](https://github.com/user-attachments/assets/04ea8697-fdf8-4527-b3f1-6c51c0b46cb5)
+
+
+5. Incluído na Abertuda do Chamado e na Criação da Ficha um input de busca da empresa. (Facilitar na busca)
 ![image](https://github.com/user-attachments/assets/fa19aecb-7a8b-4a2d-8127-8111f79e1056)
+
+6. Resolvido o Bug de quando respondido o chamado o header perde o nome:
+![image](https://github.com/user-attachments/assets/4a25c5cc-ae03-4662-ad99-addef34e2293)
+
+7. Quando chamado vai aparecer no Title o CH e Quando SL continua como estava:
+![image](https://github.com/user-attachments/assets/152fc91d-853c-4de9-ba39-122677f34081)
+
