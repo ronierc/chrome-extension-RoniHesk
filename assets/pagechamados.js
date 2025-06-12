@@ -39,7 +39,7 @@ document.querySelectorAll('table .td-left').forEach((item) => {
     if (texto.includes(analista.nome.split(' ').pop())) {
       item.id = 'idanalista-' + analista.id;
       item.innerHTML += ` <div>
-        <a href="https://suporte.suprasys.com.br/intranet/admin/show_tickets.php?suporte=${analista.id}&status1=true,true,true,false,false,false,true&limit=100" target="_blank">🚀</a>
+        <a href="https://suporte.suprasys.com.br/intranet/admin/show_tickets.php?suporte=${analista.id}&status1=true,true,true,false,false,false,true&sort=status&g=owner&category=0&limit=1000&asc=0&cot=1&more=1" target="_blank">🚀</a>
         <div>`;
       break;
     }

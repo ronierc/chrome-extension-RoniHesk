@@ -49,8 +49,10 @@ let tela = document.getElementById('view1') != null ? "chamado" : "outra";
 let numSL = document.getElementById('area_solicitacao') != null ? document.querySelector('#area_solicitacao').children[0].innerText.replace(/\D/g, '') : null;
 console.log(tela + ' -- ' + numSL)
 
+var nomeEmpresa = ''
 if (tela == 'chamado'){
-  document.querySelector('title').innerText = document.querySelector('.enclosing tbody').children[1].children[0].children[0].children[0].innerText.replace('(Implantação)', '');
+  nomeEmpresa = document.querySelector('img[src="img/telefone_empresa.png"]').parentElement.children[0].innerText.replace('(Implantação)', '');
+
   icone = 'https://img.icons8.com/?size=80&id=wsA6b0gWRtPP&format=png'; // Substitua pelo caminho do seu ícone
 
   var campo = '';
@@ -62,11 +64,12 @@ if (tela == 'chamado'){
       }
   });
   var ticket = campo.innerText.replace(' (Número do ticket: ', '_').replace(') ', '');
+  document.querySelector('title').innerText = 'CH: '+ ticket.split('_')[1] + ' - ' + nomeEmpresa
   campo.innerHTML = `<a href="https://suporte.suprasys.com.br/intranet/admin/admin_ticket.php?track=${ticket.split('_')[0]}" target="_blank">CH ${ticket.split('_')[1]}</a></a>`;
   if (numSL > 0){
     campo.innerHTML += ` <a href="https://suporte.suprasys.com.br/intranet/admin/admin_ticket.php?track=${ticket.split('_')[0]}" target="_blank">SL ${numSL}</a>`;
   } 
-  document.getElementById('setasMenu').innerHTML += ` <div class="chMenu">${document.querySelectorAll('.protocolo')[1].outerHTML}</div>`;
+  document.getElementById('setasMenu').innerHTML += ` <div class="chMenu">${document.querySelectorAll('.protocolo')[1].outerHTML}<div style="display: none;" id="chMenu"></div></div>`;
 
 }
 
@@ -74,11 +77,12 @@ if (tela == 'chamado'){
 if (numSL > 0){
   let numero = document.querySelector('#area_solicitacao').children[0].innerText.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
   numSL = numero;
-  document.querySelector('title').innerText = 'SL: '+ numero + ' - ' + document.querySelector('.enclosing tbody').children[1].children[0].children[0].children[0].innerText.replace('(Implantação)', '');
+  document.querySelector('title').innerText = 'SL: '+ numero + ' - ' + nomeEmpresa
 
   icone = 'https://img.icons8.com/?size=80&id=UmF1v-dFKf1k&format=png'; // Substitua pelo caminho do seu ícone
-
 }
+
+document.getElementById('chMenu').innerHTML = `<a href="https://suporte.suprasys.com.br/intranet/admin/admin_ticket.php?track=${ticket.split('_')[0]}" target="_blank">${document.querySelector('title').innerText}</a></a>`;
 
 // Cria o icone
 let linkTag = document.createElement('link');
@@ -91,9 +95,10 @@ document.head.appendChild(linkTag);
 // Seleciona e adiciona o evento
 document.querySelectorAll('.chMenu').forEach(function(elemento) {
     elemento.addEventListener('click', function() {
-        copiarHTML(elemento);
+        copiarHTML(elemento.lastChild);
     });
 });
+
 // Função de cópia
 function copiarHTML(elemento) {
     const conteudoHTML = elemento.innerHTML;
@@ -103,11 +108,11 @@ function copiarHTML(elemento) {
     navigator.clipboard.write([clipboardItem])
         .then(() => {
             // Adiciona a classe de destaque
-            elemento.classList.add('copiado');
+            elemento.parentElement.classList.add('copiado');
             
             // Remove a classe depois de 5 segundos
             setTimeout(() => {
-                elemento.classList.remove('copiado');
+                elemento.parentElement.classList.remove('copiado');
             }, 5000);
         })
         .catch(err => {

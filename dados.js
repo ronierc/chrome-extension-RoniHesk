@@ -22,7 +22,7 @@ const analistasData = [
   { id: 883, nome: 'Laerte Fernandes', setor: 'INTERNO' },
   { id: 11, nome: 'Vitor', setor: 'EXTERNO' },
   { id: 20, nome: 'Luis Henrique', setor: 'INTERNO' },
-  { id: 818, nome: 'Alisson', setor: 'INTERNO' },
+  { id: 818, nome: 'TI', setor: 'INTERNO' },
   { id: 1031, nome: 'Leonardo', setor: 'INTERNO' },
   { id: 1033, nome: 'Batista', setor: 'INTERNO' },
   { id: 828, nome: 'Geovanne', setor: 'INTERNO' },
@@ -39,5 +39,6 @@ const linksExternos = [
   { nome: 'Trello', link: 'https://trello.com/' },
   { nome: 'SupraHelp', link: 'https://hom.suprahelp.suprasys.com.br/' },
   { nome: 'Econect', link: 'https://www.econeteditora.com.br/' },
-  { nome: 'Status Serviços', link: 'https://status.suprasys.com.br/' }
+  { nome: 'Status Serviços', link: 'https://status.suprasys.com.br/' },
+  { nome: 'RoniHesk (Extensão)', link: 'https://github.com/ronierc/chrome-extension-RoniHesk' }
 ];
