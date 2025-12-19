@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "RoniHesk",
-  "version": "0.0.4.5",
+  "version": "0.0.5.0",
   "description": "Feito pelo mais lindu da SupraSys.",
   "action": {
     "default_popup": "index.html",
@@ -16,25 +16,32 @@
   "permissions": [
     "activeTab",
     "scripting",
-    "tabs"
+    "tabs",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/img/*"],
+      "matches": ["<all_urls>"]
+    }
   ],
   "content_scripts": [
     {
       "matches": ["https://suporte.suprasys.com.br/*"],
       "exclude_globs": ["*.chamados*","*agendador*","*impressao_ficha_tecnica*"],
       "css": ["/assets/styles.css"],
-      "js": ["dados.js", "config.js","/assets/menu.js","/assets/table.js","/assets/home.js","/assets/trocaCor.js"],
+      "js": ["/assets/js/storage.js", "dados.js", "/assets/menu.js","/assets/table.js","/assets/home.js","/assets/trocaCor.js"],
       "runAt": "document_start"
     },
     {
       "matches": ["https://suporte.suprasys.com.br/.chamado*"],
       "css": ["/assets/pagechamados.css"],
-      "js": ["dados.js", "config.js","/assets/pagechamados.js"],
+      "js": ["dados.js", "/assets/js/storage.js", "/assets/pagechamados.js"],
       "runAt": "document_end"
     },
     {
       "matches": ["https://suporte.suprasys.com.br/intranet/admin/new_ticket*", "https://suporte.suprasys.com.br/intranet/admin/nova_ficha*"],
-      "js": ["config.js","/assets/selectEmpresa.js"],
+      "js": ["/assets/selectEmpresa.js"],
       "runAt": "document_end"
     }
   ]

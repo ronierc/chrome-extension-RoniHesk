@@ -20,7 +20,6 @@ if ((document.getElementById('cke_message') == null) && document.querySelector('
   const achat = document.querySelector('form[name="findby"]').parentElement.innerHTML;
   document.querySelector('form[name="findby"]').parentElement.parentElement.parentElement.parentElement.style.display = 'none';
 
-
   //Cria botão no menu com os buscadores
   document.querySelector('#groupMenu').innerHTML += `
     <div class="btn-group" role="group">

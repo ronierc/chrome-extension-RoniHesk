@@ -111,4 +111,4 @@ document.querySelector('table.header table tbody tr').innerHTML += `
 const root = document.documentElement;
 
 // Define o novo valor da variável
-root.style.setProperty('--pxBarra', configUser.tamanhoBarra);
+// root.style.setProperty('--pxBarra', configUser.tamanhoBarra);

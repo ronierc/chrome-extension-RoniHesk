@@ -1,0 +1,59 @@
+:root {
+    --bgPrimary: #363b3f;
+    --bgSecondary: #292e32;
+    --bgTertiary: #56595e;
+    --bgComent: #484c4f;
+    --fontColor: #c9cacc;
+    --purple: #BD93F9;
+    --cyan: #8BE9FD;
+    --corPadrao: #BD93F9;
+}
+
+*{margin:0;padding:0;}
+
+body{
+    width: 280px;
+    background: var(--bgPrimary); 
+    color: var(--fontColor); 
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background: var(--corPadrao); 
+    color: var(--fontColor);
+    text-shadow: #000 1px 1px 2px; 
+    padding: 10px;
+}
+main{
+    padding: 10px;
+}
+input, select, button{
+    background: var(--bgSecondary);
+    border: 1px solid var(--bgTertiary);
+    padding: 5px;
+    color: var(--fontColor);
+}
+input[type="checkbox"], input[type="radio"]{
+    height: 25px;
+    width: 25px;  
+    appearance: none;  
+    background: var(--bgComent); 
+    margin:0;
+}
+
+input[type="radio"]{
+    border-radius: 50%;
+}
+input:checked{
+    appearance: auto;  
+    accent-color: var(--corPadrao);
+}
+
+
+#options{
+    display: grid;
+    gap: 5px;
+}
+
+p{
+}

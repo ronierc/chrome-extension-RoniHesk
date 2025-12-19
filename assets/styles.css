@@ -29,6 +29,7 @@
 *::-webkit-scrollbar-corner { background: var(--purple); }
 /**{direction: rtl;}*/
 
+
 .texto-data div{ /*Flexa solicitação*/
     color: var(--bgSecondary) !important ;
 }
@@ -38,6 +39,15 @@
     display: block;
     margin: 10px 0;
     border-color: var(--purple);
+}
+#diasAberto{    
+    border-radius: 20%;
+    text-align: center;
+    padding: 3px;
+    font-size: 90%;
+}
+#icoInfo{
+    fill: diasAberto
 }
 a {
     color: #68b9ff !important;
@@ -334,3 +344,4 @@ ul.tabs li.selected a{
     text-shadow: none !important;
     color: var(--fontColor) !important;
   }
+

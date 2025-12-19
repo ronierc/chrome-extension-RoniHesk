@@ -5,23 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RoniHesk</title>
 
+  <link rel="stylesheet" type="text/css" href="assets/css/indexStyle.css">
+
 </head>
 <body>
-  <h1>RoniHesk</h1>
-  <p>Se chegou até aqui, você deve uma cerveja para o mais lindu da supra.</p>
+  <header>
+    <h1>RoniHesk</h1>
+    <img src="https://raw.githubusercontent.com/ronierc/ronier/12f9d513f539ace625e1482ea615cd69fd65f8dd/imagens/roni_rosto_svg.svg" alt="Roni" >
+  </header>
+  <main>
+    <p>Após alteração é necessário atualizar a página.</p>
+    
 
-  <style type="text/css">
-  	*{margin:0;padding:0;}
-  	body{
-  		width: 200px;
-  	}
-  	h1{
-  		background-image: linear-gradient(160deg, #fb0301, #fb0301 25%, #fbbb06, #34a653, #206ace 75%);
-  		padding: 10px;
-  	}
-  	p{
-  		padding: 10px;
-  	}
-  </style>
+    <div id="options" style="padding-top: 10px;">
+        <!-- <label for="txtBusca">Buscar:</label>
+      <div style="display: flex;justify-content: space-between;">
+        <input type="text" placeholder="Digite o nº" id="txtBusca" style="width: 80px;">
+        <select name="opBusca" id="opBusca">
+          <option value="ch">Chamado</option>
+          <option value="sl">Solicitação</option>
+        </select> 
+        <button style="width: 85px;" id="buscar">Buscar</button>
+      </div> -->
+
+      <label for="owner">Equipe:</label>
+      <select name="owner" id="owner">
+        <option value="TODOS">Todos</option>
+        <option value="INTERNO">Interno</option>
+        <option value="EXTERNO">Externo</option>
+      </select>  
+
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <label for="colorDef">Cor padrão:</label>
+        <input type="color" id="colorDef" list="cores">
+            <datalist id="cores"> 
+              <option value="#0aa2c0">Cyan</option>
+              <option value="#1aa179">Teal</option>
+              <option value="#dc3545">Red</option>
+              <option value="#e139ac">Pink</option>
+              <option value="#59359a">Purple</option>
+            </datalist> 
+
+        <label for="dash">DashBord:</label> 
+        <input type="checkbox" id="dash" />
+      </div>
+  </div>
+
+  </main>
+
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/index.js"></script>
 </body>
 </html>

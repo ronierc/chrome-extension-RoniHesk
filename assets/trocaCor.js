@@ -1,3 +1,9 @@
+(async () => {
+  const configUser = await window.initStorage();
+  const root = document.documentElement;
+
+  root.style.setProperty('--purple', configUser.corPadrao);
+
 
 // Chama a função para substituir as cores quando a página estiver completamente carregada 
 window.onload = substituirCores;
@@ -75,10 +81,10 @@ function substituirCores() {
           elemento.style.color = 'var(--fontColor)';//'#cfcfcf';
       }
       if (corDaFonte === 'rgb(0, 0, 153)' || corDaFonte === '#000099') {
-          elemento.style.color = '#68b9ff';//'#cfcfcf';
+          elemento.style.color = 'var(--purple)';//'#cfcfcf';
       }
       if (corDaFonte === 'rgb(238 238 238)' || corDaFonte === '#EEEEEE') {
-          elemento.style.color = '#68b9ff';//'#cfcfcf';
+          elemento.style.color = 'var(--purple)';//'#cfcfcf';
       }
   }
   // console.log(elementos)
@@ -224,3 +230,4 @@ if (document.querySelector('#HeskMsg') !== null){
 //#cke_63_frame > document > html body.cke_ltr
 
 
+})();

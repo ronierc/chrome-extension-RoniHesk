@@ -8,7 +8,7 @@ const analistasData = [
   { id: 361, nome: 'Adriano Pavaneli', setor: 'EXTERNO' },
   { id: 994, nome: 'Gabriel Ribeiro', setor: 'INTERNO' },
   { id: 848, nome: 'Leandro', setor: 'EXTERNO' },
-  { id: 401, nome: 'Pinheiro', setor: 'EXTERNO' },
+  { id: 401, nome: 'Pinheiro', setor: 'INTERNO' },
   { id: 705, nome: 'Julio Polizelli', setor: 'INTERNO' },
   { id: 18, nome: 'Pavesi', setor: 'INTERNO' },
   { id: 209, nome: 'Fachini', setor: 'INTERNO' },
@@ -27,17 +27,24 @@ const analistasData = [
   { id: 1033, nome: 'Batista', setor: 'INTERNO' },
   { id: 828, nome: 'Geovanne', setor: 'INTERNO' },
   { id: 1036, nome: 'Vicente', setor: 'INTERNO' },
-  { id: 1037, nome: 'Neves', setor: 'INTERNO' }
+  { id: 1037, nome: 'Neves', setor: 'INTERNO' },
+  { id: 1045, nome: 'Bruno Xavier', setor: 'INTERNO' },
+  { id: 1044, nome: 'Enzo', setor: 'INTERNO' },
+  { id: 1047, nome: 'Santareli', setor: 'INTERNO' },
+  { id: 1048, nome: 'Rodrigues', setor: 'INTERNO' }
 ];
 
 const linksExternos = [
   { nome: 'Chamados', link: 'https://suporte.suprasys.com.br/.chamados/' },
+  { nome: 'SupraHelpNovo Homologação', link: 'https://hom.suprahelp.suprasys.com.br/' },
+  { nome: 'SupraHelpNovo Produção', link: 'https://suprahelp.suprasys.com.br/' },
+  { nome: 'SupraVendasAPP Homologação', link: 'https://hom.painel.vendas.suprasys.com.br/' },
+  { nome: 'SupraVendasAPP Produção', link: 'https://painel.vendas.suprasys.com.br/' },
   { nome: 'Pedidos Online Homologação', link: 'http://hom.vendas.suprasys.com.br/' },
   { nome: 'Pedidos Online Produção', link: 'https://vendas.suprasys.com.br/' },
   { nome: 'IntraSys', link: 'https://suporte.suprasys.com.br/controle' },
   { nome: 'Monitor de Backups', link: 'https://monitor-backup.suprasys.com.br' },
   { nome: 'Trello', link: 'https://trello.com/' },
-  { nome: 'SupraHelp', link: 'https://hom.suprahelp.suprasys.com.br/' },
   { nome: 'Econect', link: 'https://www.econeteditora.com.br/' },
   { nome: 'Status Serviços', link: 'https://status.suprasys.com.br/' },
   { nome: 'RoniHesk (Extensão)', link: 'https://github.com/ronierc/chrome-extension-RoniHesk' }
