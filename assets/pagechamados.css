@@ -27,6 +27,11 @@
 *::-webkit-scrollbar-thumb { background: var(--corPadrao); }
 *::-webkit-scrollbar-corner { background: var(--corPadrao); }
 
+::selection {
+    background-color: var(--corPadrao);
+    color: var(--fontColor);
+}
+
 html body div.container-fluid {
     padding: 0 !important;
 }

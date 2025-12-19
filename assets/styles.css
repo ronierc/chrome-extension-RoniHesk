@@ -29,6 +29,10 @@
 *::-webkit-scrollbar-corner { background: var(--purple); }
 /**{direction: rtl;}*/
 
+::selection {
+    background-color: var(--purple);
+    color: var(--fontColor);
+}
 
 .texto-data div{ /*Flexa solicitação*/
     color: var(--bgSecondary) !important ;
