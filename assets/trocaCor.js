@@ -1,17 +1,22 @@
+// Chama a função para substituir as cores quando a página estiver completamente carregada 
+window.onload = substituirCores;
+
+let vCorPadrao = '#bd93f9';
 (async () => {
   const configUser = await window.initStorage();
   const root = document.documentElement;
 
   root.style.setProperty('--purple', configUser.corPadrao);
+  vCorPadrao = configUser.corPadrao;
+  
+  })();
 
-
-// Chama a função para substituir as cores quando a página estiver completamente carregada 
-window.onload = substituirCores;
 
 // Função para substituir todas as cores de fundo
 function substituirCores() {
   // Obtém todos os elementos do documento
   var elementos = document.getElementsByTagName('*');
+  
   
   // Itera sobre todos os elementos
   for (var i = 0; i < elementos.length; i++) {
@@ -23,7 +28,7 @@ function substituirCores() {
       var corDaFonte = window.getComputedStyle(elemento, null).getPropertyValue('color');
       if (corDeFundo === 'rgb(255, 255, 255)' || corDeFundo === '#FFFFFF') {
           elemento.style.background = 'var(--bgPrimary)';
-          elemento.style.color = 'var(--fontColor)';
+          elemento.style.color = 'var(--fontColor) !important';
       }
       if (
         corDeFundo === 'rgb(245, 255, 250)' || corDeFundo === '#f5fffa' || 
@@ -34,7 +39,7 @@ function substituirCores() {
         corDeFundo === 'rgb(245, 245, 245)' || corDeFundo === '#F5F5F5' ||
         corDeFundo === 'rgb(244, 244, 244)' || corDeFundo === '#F4F4F4') {
           elemento.style.background = 'var(--bgSecondary)';
-          elemento.style.color = 'var(--fontColor)';
+          elemento.style.color = 'var(--fontColor) !important';
       }
       if (
         corDeFundo === 'rgb(255, 255, 204)' || corDeFundo === '#FFFFCC' ||
@@ -44,7 +49,7 @@ function substituirCores() {
         corDeFundo === 'rgb(243, 243, 243)' || corDeFundo === '#F3F3F3' ||
         corDeFundo === 'rgb(231, 231, 231)' || corDeFundo === '#e7e7e7') {
           elemento.style.background = 'var(--bgTertiary)';
-          elemento.style.color = 'var(--fontColor)';
+          elemento.style.color = 'var(--fontColor) !important';
       }
       if ( //Fundos verde
         corDeFundo === 'rgb(221, 255, 221)' || corDeFundo === '#DDFFDD' ||
@@ -53,15 +58,15 @@ function substituirCores() {
         corDeFundo === 'rgb(200, 229, 188)' || corDeFundo === '#c8e5bc' ||
         corDeFundo === 'rgb(153, 255, 102)' || corDeFundo === '#99FF66' ||
         corDeFundo === 'rgb(223, 240, 216)' || corDeFundo === '#dff0d8') {
-          elemento.style.background = '#53A653';
-          elemento.style.color = 'var(--fontColor)';
+          elemento.style.background = 'var(--green)';
+          elemento.style.color = 'var(--fontColor) !important';
       }
       if (
         corDeFundo === 'rgb(255, 255, 153)' || corDeFundo === '#FFFF99' ||
         corDeFundo === 'rgb(251, 249, 238)' || corDeFundo === '#fbf9ee') {
           elemento.style.background = 'var(--purple)';
-          elemento.style.color = 'var(--bgSecondary)';
-          elemento.style.borderColor = '#ff66ff';
+          elemento.style.color = 'var(--bgSecondary) !important';
+          elemento.style.borderColor = 'var(--bgComent)';
       }
       if (
         corDaBorda === 'rgb(209, 220, 235)' || corDaBorda === '#d1dceb' ||
@@ -78,7 +83,7 @@ function substituirCores() {
       }
       if (corDaFonte === 'rgb(74, 85, 113)' || corDaFonte === '#4a5571' ||
           corDaFonte === 'rgb(0, 0, 0)' || corDaFonte === '#000000') {
-          elemento.style.color = 'var(--fontColor)';//'#cfcfcf';
+          elemento.style.color = 'var(--fontColor) !important';//'#cfcfcf';
       }
       if (corDaFonte === 'rgb(0, 0, 153)' || corDaFonte === '#000099') {
           elemento.style.color = 'var(--purple)';//'#cfcfcf';
@@ -89,6 +94,7 @@ function substituirCores() {
   }
   // console.log(elementos)
 }
+
 
 
 //TextArea dentro do chamado.
@@ -150,12 +156,12 @@ if (document.querySelector('#HeskMsg') !== null){
       }
       .cke_editable div { /*Div de campo de codigo*/
         background-color: #4a5571 !important;
-        border-color: #bd93f9 !important;
+        border-color: ${vCorPadrao} !important;
       }
       *::-webkit-scrollbar-track { background-color: #4a5571; }
       *::-webkit-scrollbar { width: 5px; background: #4a5571; }
-      *::-webkit-scrollbar-thumb { background:  #BD93F9; }
-      *::-webkit-scrollbar-corner { background: #BD93F9; }
+      *::-webkit-scrollbar-thumb { background:  ${vCorPadrao}; }
+      *::-webkit-scrollbar-corner { background: ${vCorPadrao}; }
       .marker{
         background: #910a4e ;
       }
@@ -165,7 +171,7 @@ if (document.querySelector('#HeskMsg') !== null){
       }
 
       .cke_panel_listItem a{
-        border-color: #BD93F9;
+        border-color: ${vCorPadrao};
       }
     </style>`;
     
@@ -181,8 +187,8 @@ if (document.querySelector('#HeskMsg') !== null){
           }
           *::-webkit-scrollbar-track { background-color: #4a5571; }
           *::-webkit-scrollbar { width: 5px; background: #4a5571; }
-          *::-webkit-scrollbar-thumb { background:  #BD93F9; }
-          *::-webkit-scrollbar-corner { background: #BD93F9; }
+          *::-webkit-scrollbar-thumb { background:  ${vCorPadrao}; }
+          *::-webkit-scrollbar-corner { background: ${vCorPadrao}; }
           .cke_panel_listItem.cke_selected a{
             background-color: #1a1a1a !important;
           }
@@ -208,7 +214,7 @@ if (document.querySelector('#HeskMsg') !== null){
           }
           #cke_77 div {/*Div de campo de codigo*/
               background-color: #4a5571 !important;
-              border-color: #bd93f9 !important;
+              border-color: ${vCorPadrao} !important;
           }
           code{
             color: #ff48b6 !important;
@@ -222,12 +228,4 @@ if (document.querySelector('#HeskMsg') !== null){
   }, "2000");
 
 
-
-    
-
 }
-
-//#cke_63_frame > document > html body.cke_ltr
-
-
-})();

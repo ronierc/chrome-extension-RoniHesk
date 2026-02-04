@@ -15,10 +15,10 @@
     --purple: #BD93F9;
     --purpleRgb: 189, 147, 249;
     --cyan: #8BE9FD;
-    --orange: #FFB86C;
-    --blue: #2d6ca2;
-    --green: #50FA7B;
-    --red: #FF5555;
+    --blue: #68b9ff;
+    --orange: #ff8a16;
+    --green: #50fa7b;
+    --red: #ff0033;
     --pxBarra: 5px;
     --marker: #910a4e;
 }
@@ -54,7 +54,7 @@
     fill: diasAberto
 }
 a {
-    color: #68b9ff !important;
+    color: var(--blue) !important;
 }
 a:hover, a:focus {
     color: var(--orange) !important ;
@@ -160,10 +160,14 @@ table.enclosing code{
 }
 .ticketrow div div{ /*Div de campo de codigo*/
     background-color: #191f31 !important;
-    border-color: #bd93f9 !important;
+    border-color: var(--purple) !important;
 } .ticketalt div div {
     background-color: #4a5571 !important;
-    border-color: #bd93f9 !important;
+    border-color: var(--purple) !important;
+}
+
+div.notice {
+    border: 1px solid var(--bgComent);
 }
 
 table.header, .navbar-collapse{
@@ -349,3 +353,17 @@ ul.tabs li.selected a{
     color: var(--fontColor) !important;
   }
 
+
+.open {color: var(--red) !important; }
+.waitingreply {color : #4a5571 !important; }
+.analysis {color: var(--orange) !important; }
+.replied {color: var(--blue) !important; }
+.resolved {color : var(--green) !important; }
+
+.success {color : var(--green) !important; }
+.error {color : var(--red) !important; }
+.notice {color : var(--orange) !important; }
+
+#ok {
+	border: 1px solid var(--green) !important; 
+}
