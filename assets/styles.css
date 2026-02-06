@@ -18,9 +18,12 @@
     --blue: #68b9ff;
     --orange: #ff8a16;
     --green: #50fa7b;
+    --greenDark: #53a653;
+    --greenDark2: #2f613c;
     --red: #ff0033;
+    --redDark: #910a4e;
     --pxBarra: 5px;
-    --marker: #910a4e;
+    --pink: #ed008e;
 }
 
 *::-webkit-scrollbar-track { background-color: var(--bgTertiary); }
@@ -152,7 +155,7 @@ table.enclosing{
 }
 
 table.enclosing .marker{
-    background: #910a4e ;
+    background: var(--redDark) ;
 }
 table.enclosing code{
     color: #ff48b6 !important;
@@ -183,13 +186,20 @@ td.andamento,td.admin_critical { /*Aguardando resposta*/
     border-color: var(--purple) !important;
 }
 td.notes{
-    background: #ed008e !important;
+    background: var(--pink) !important;
     color: var(--fontColor) !important;
-    border-color: #910a4e !important;
+    border-color: var(--redDark) !important;
 }
 #setasMenu{
     display: flex !important;
 }
+
+.descricao_sol, .versao-sistema, div.success {
+    background: var(--greenDark) !important;
+    border-color: var(--green) !important;
+    color: var(--fontColor) !important;
+}
+
 .chMenu{
     display: grid;
     align-items: center;
@@ -284,7 +294,7 @@ ul.tabs li.selected a{
 }
 
 .copiado {
-    background-color: var(--marker) !important;
+    background-color: var(--redDark) !important;
     transition: background-color 0.3s ease;
 }
 
