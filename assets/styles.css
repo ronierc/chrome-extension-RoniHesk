@@ -13,6 +13,8 @@
     --fontFamily: 'Nunito', sans-serif;
     --border: #4a5571;
     --purple: #BD93F9;
+    --corPadrao: #BD93F9;
+    --purple0: #BD93F9;
     --purpleRgb: 189, 147, 249;
     --cyan: #8BE9FD;
     --blue: #68b9ff;
@@ -20,20 +22,25 @@
     --green: #50fa7b;
     --greenDark: #53a653;
     --greenDark2: #2f613c;
-    --red: #ff0033;
+    --red: #FF4455;
     --redDark: #910a4e;
     --pxBarra: 5px;
     --pink: #ed008e;
 }
 
+.light{    
+    --green: #23D1AE;
+    --greenDark: #167e69;
+}
+
 *::-webkit-scrollbar-track { background-color: var(--bgTertiary); }
 *::-webkit-scrollbar { width: var(--pxBarra); background: var(--bgTertiary); }
-*::-webkit-scrollbar-thumb { background: var(--purple); }
-*::-webkit-scrollbar-corner { background: var(--purple); }
+*::-webkit-scrollbar-thumb { background: var(--corPadrao); }
+*::-webkit-scrollbar-corner { background: var(--corPadrao); }
 /**{direction: rtl;}*/
 
 ::selection {
-    background-color: var(--purple);
+    background-color: var(--corPadrao);
     color: var(--fontColor);
 }
 
@@ -45,13 +52,10 @@
 #tktTable hr{ 
     display: block;
     margin: 10px 0;
-    border-color: var(--purple);
+    border-color: var(--corPadrao);
 }
-#diasAberto{    
-    border-radius: 20%;
-    text-align: center;
-    padding: 3px;
-    font-size: 90%;
+#diasAberto{
+    font-weight: bold;
 }
 #icoInfo{
     fill: diasAberto
@@ -65,7 +69,7 @@ a:hover, a:focus {
 body {
     background: var(--bgPrimary) !important;
     border-color: var(--border) !important;
-    color: var(--purple) !important;
+    color: var(--corPadrao) !important;
     padding: 70px 0 0 0 !important;
     font-family: var(--fontFamily) !important;
 }
@@ -108,7 +112,7 @@ input[type="radio"], input[type="checkbox"]{
     }
     &:checked{        
         appearance: auto;  
-        accent-color: var(--purple) !important;
+        accent-color: var(--corPadrao) !important;
     }
 }
 input::file-selector-button{
@@ -163,10 +167,10 @@ table.enclosing code{
 }
 .ticketrow div div{ /*Div de campo de codigo*/
     background-color: #191f31 !important;
-    border-color: var(--purple) !important;
+    border-color: var(--corPadrao) !important;
 } .ticketalt div div {
     background-color: #4a5571 !important;
-    border-color: var(--purple) !important;
+    border-color: var(--corPadrao) !important;
 }
 
 div.notice {
@@ -176,7 +180,7 @@ div.notice {
 table.header, .navbar-collapse{
     background: var(--bgSecondary) !important;
     color: var(--fontColor) !important;
-    border-bottom: var(--purple) 4px solid !important;
+    border-bottom: var(--corPadrao) 4px solid !important;
 }
 table.header td{
     padding: 0 10px 0 0; 
@@ -363,17 +367,13 @@ ul.tabs li.selected a{
     color: var(--fontColor) !important;
   }
 
-
-.open {color: var(--red) !important; }
-.waitingreply {color : #4a5571 !important; }
-.analysis {color: var(--orange) !important; }
+.resolved, .success {color : var(--green) !important; }
+.open, .error, .red {color : var(--red) !important; }
+.analysis, .notice {color : var(--orange) !important; }
+.waitingreply {color : var(--corPadrao) !important; }
 .replied {color: var(--blue) !important; }
-.resolved {color : var(--green) !important; }
 
-.success {color : var(--green) !important; }
-.error {color : var(--red) !important; }
-.notice {color : var(--orange) !important; }
+#ok { border-color: var(--green) !important; }
+.critical { color: var(--purple) !important; }
 
-#ok {
-	border: 1px solid var(--green) !important; 
-}
+h1 { color : var(--green) !important; }

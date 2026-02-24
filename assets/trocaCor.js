@@ -6,7 +6,7 @@ let vCorPadrao = '#bd93f9';
   const configUser = await window.initStorage();
   const root = document.documentElement;
 
-  root.style.setProperty('--purple', configUser.corPadrao);
+  root.style.setProperty('--corPadrao', configUser.corPadrao);
   vCorPadrao = configUser.corPadrao;
   
   })();
@@ -64,7 +64,7 @@ function substituirCores() {
       if (
         corDeFundo === 'rgb(255, 255, 153)' || corDeFundo === '#FFFF99' ||
         corDeFundo === 'rgb(251, 249, 238)' || corDeFundo === '#fbf9ee') {
-          elemento.style.background = 'var(--purple)';
+          elemento.style.background = 'var(--corPadrao)';
           elemento.style.color = 'var(--bgSecondary) !important';
           elemento.style.borderColor = 'var(--bgComent)';
       }
@@ -86,10 +86,10 @@ function substituirCores() {
           elemento.style.color = 'var(--fontColor) !important';//'#cfcfcf';
       }
       if (corDaFonte === 'rgb(0, 0, 153)' || corDaFonte === '#000099') {
-          elemento.style.color = 'var(--purple)';//'#cfcfcf';
+          elemento.style.color = 'var(--corPadrao)';//'#cfcfcf';
       }
       if (corDaFonte === 'rgb(238 238 238)' || corDaFonte === '#EEEEEE') {
-          elemento.style.color = 'var(--purple)';//'#cfcfcf';
+          elemento.style.color = 'var(--corPadrao)';//'#cfcfcf';
       }
   }
   // console.log(elementos)
