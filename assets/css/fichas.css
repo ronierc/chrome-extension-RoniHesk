@@ -1,0 +1,17 @@
+:root {
+    --bgPrimary: #363b3f;
+    --bgSecondary: #292e32;
+    --bgTertiary: #56595e;
+    --bgComent: #484c4f;
+    --fontColor: #c9cacc;
+    --purple: #BD93F9;
+    --cyan: #8BE9FD;
+    --corPadrao: #BD93F9;
+}
+
+*{margin:0;padding:0;}
+
+body{
+    background: var(--bgPrimary) !important;
+    color: var(--fontColor) !important;
+}

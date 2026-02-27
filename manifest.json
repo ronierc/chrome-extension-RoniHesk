@@ -46,7 +46,13 @@
     },
     {
       "matches": ["https://suporte.suprasys.com.br/intranet/admin/controlar_fichas*"],
-      "js": ["/assets/js/fichas.js"],
+      "css": ["/assets/css/fichas.css"],
+      "js": ["/assets/js/imgs.js","/assets/js/fichas.js"],
+      "runAt": "document_end"
+    },
+    {
+      "matches": ["https://suporte.suprasys.com.br/intranet/admin/admin_ticket.php?track=*"],
+      "js": ["/assets/js/imgs.js"],
       "runAt": "document_end"
     }
   ]
