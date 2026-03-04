@@ -490,7 +490,7 @@ a.cke_combo_button {
 }
 
 .cke_wysiwyg_frame, .cke_wysiwyg_div {
-    background: var(--bgPrimary) !important;
+    background: var(--bgSecondary) !important;
     color: var(--fontColor) !important;
 }
 

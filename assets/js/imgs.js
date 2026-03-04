@@ -10,6 +10,7 @@ const troca = {
   '../img/change.png': 'https://img.icons8.com/?size=20&id=m8gRP2AQ4AOX&format=png',
   '../img/E.png': 'https://img.icons8.com/?size=20&id=dKMGP5XqWxob&format=png',
   '../img/D.png': 'https://img.icons8.com/?size=20&id=IchwUEgoxNcw&format=png',
+  '../img/AT.png': 'https://img.icons8.com/?size=20&id=GOX0rYS9vb7n&format=png',
 };
 
 //Seleciona as img para trocar
