@@ -19,8 +19,62 @@
     --blue: #2d6ca2;
     --green: #50FA7B;
     --red: #FF5555;
+    --yellow: #bfb159;
     --corPadrao: #000;
+
+    --warning-bg: #2E2A0F;
+    --warning2-bg: #3F3A12;
+    --info-bg: #1E3A5F;
+    --info2-bg: #1B2B45;
+    --cell-neutral: #273449;
+    --cell-soft: #223048;
+    --pending-bg: #3B2F1B;
+    --danger-bg: #3B1212;
+    --success-bg: #0F2E1D;
 }
+
+
+[data-bs-theme=light] {
+    --bgPrimary: #efeeee;
+    --bgPrimaryRGB: 255, 255, 255;
+    --bgSecondary: #dee2e6;
+    --bgTertiary: #d1dceb ;
+    --corBtn: #31d2f2;
+    --corBtnHover: #017586;
+    --bgComent: #6272A4;
+    --fontColor: #4a5571;
+    --fontColor2: #000;
+    --fontColorHover: #495057;
+    --fontFamily: 'Nunito', sans-serif;
+    --border: #d1dceb;
+    --purple: #BD93F9;
+    --corPadrao: #BD93F9;
+    --purpleRgb: 189, 147, 249;
+    --cyan: #8BE9FD;
+    --blue: #3388d3;
+    --orange: #ff8a16;
+    --green: #34aa52;
+    --greenDark: #53a653;
+    --greenDark2: #3b774b;
+    --red: #FF4455;
+    --redDark: #c01068;
+    --pxBarra: 5px;
+    --pink: #ed008e;
+}
+
+/* .danger{ background: var(--danger-bg) !important;}
+.warning{ background: var(--warning-bg) !important;}
+.warning2{ background: var(--warning2-bg) !important;}
+.info{ background: var(--info-bg) !important;}
+.borda1{ background: var(--info2-bg) !important;}
+.cinza-1{ background: var(--cell-neutral) !important;}
+.cinza-2{ background: var(--cell-neutral) !important;}
+.cinza-3{ background: var(--cell-neutral) !important;}
+.cinza-4{ background: var(--cell-neutral) !important;}
+.cinza-5{ background: var(--cell-neutral) !important;}
+.cinza-6{ background: var(--cell-neutral) !important;}
+.cinza-7{ background: var(--cell-neutral) !important;} */
+
 
 *::-webkit-scrollbar-track { background-color: var(--bgTertiary); }
 *::-webkit-scrollbar { width: 5px; background: var(--bgTertiary); }
@@ -30,6 +84,26 @@
 ::selection {
     background-color: var(--corPadrao);
     color: var(--fontColor);
+}
+
+/* body {
+    background: var(--bgPrimary) !important;
+    border-color: var(--border) !important;
+    color: var(--fontColor) !important;
+    padding: 70px 0 0 0 !important;
+    font-family: var(--fontFamily) !important;
+} 
+*/
+.table-striped > tbody > tr:nth-of-type(odd) {
+    box-shadow: inset 0 0 0 9999px rgba(var(--bgPrimaryRGB), 0.1);
+}
+
+.table > thead > tr > td.warning2{
+    background: var(--yellow) !important;
+}
+
+input#relogio{
+    color: var(--red) !important;
 }
 
 html body div.container-fluid {

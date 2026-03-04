@@ -9,6 +9,35 @@
     --corPadrao: #BD93F9;
 }
 
+
+[data-bs-theme=light] {
+    --bgPrimary: #efeeee;
+    --bgPrimaryRGB: 255, 255, 255;
+    --bgSecondary: #dee2e6;
+    --bgTertiary: #d1dceb ;
+    --corBtn: #31d2f2;
+    --corBtnHover: #017586;
+    --bgComent: #6272A4;
+    --fontColor: #4a5571;
+    --fontColor2: #000;
+    --fontColorHover: #495057;
+    --fontFamily: 'Nunito', sans-serif;
+    --border: #d1dceb;
+    --purple: #BD93F9;
+    --corPadrao: #BD93F9;
+    --purpleRgb: 189, 147, 249;
+    --cyan: #8BE9FD;
+    --blue: #3388d3;
+    --orange: #ff8a16;
+    --green: #34aa52;
+    --greenDark: #53a653;
+    --greenDark2: #3b774b;
+    --red: #FF4455;
+    --redDark: #c01068;
+    --pxBarra: 5px;
+    --pink: #ed008e;
+}
+
 *{margin:0;padding:0;}
 
 body{

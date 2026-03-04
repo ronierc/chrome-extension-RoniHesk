@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "RoniHesk",
-  "version": "0.0.5.1",
+  "version": "0.0.5.2",
   "description": "Feito pelo mais lindu da SupraSys.",
   "action": {
     "default_popup": "index.html",
@@ -46,7 +46,6 @@
     },
     {
       "matches": ["https://suporte.suprasys.com.br/intranet/admin/controlar_fichas*"],
-      "css": ["/assets/css/fichas.css"],
       "js": ["/assets/js/imgs.js","/assets/js/fichas.js"],
       "runAt": "document_end"
     },

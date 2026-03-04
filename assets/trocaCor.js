@@ -1,5 +1,6 @@
 // Chama a função para substituir as cores quando a página estiver completamente carregada 
 window.onload = substituirCores;
+let styleRoot = '';
 
 let vCorPadrao = '#bd93f9';
 (async () => {
@@ -8,6 +9,37 @@ let vCorPadrao = '#bd93f9';
 
   root.style.setProperty('--corPadrao', configUser.corPadrao);
   vCorPadrao = configUser.corPadrao;
+
+  if(configUser.tema == 'light'){
+    styleRoot = `
+      :root {
+        --bgPrimary: #efeeee;
+        --bgSecondary: #dee2e6;
+        --bgTertiary: #d1dceb ;
+        --bgComent: #bcc8d9;
+        --fontColor: #4a5571;
+        --purple: #BD93F9;
+        --red: #FF4455;
+        --redDark: #c01068;
+        --pink: #d63384;
+        --yellow: #FFEB3B;
+      } `;
+  } else {
+    styleRoot = `
+      :root {
+        --bgPrimary: #363b3f;
+        --bgSecondary: #292e32;
+        --bgTertiary: #56595e;
+        --bgComent: #484c4f;
+        --fontColor: #c9cacc;
+        --purple: #BD93F9;
+        --cyan: #8BE9FD;
+        --red: #FF4455;
+        --redDark: #c01068;
+        --pink: #e685b5;
+        --yellow: #FFEB3B;        
+      } `;
+  }
   
   })();
 
@@ -95,25 +127,6 @@ function substituirCores() {
   // console.log(elementos)
 }
 
-
-
-//TextArea dentro do chamado.
-/*
-document.querySelector('iframe').contentWindow.document.querySelector('body').innerHTML += `
-<style>
-
-body {
-  background-color: #191f31;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.marker{
-  background: #BD93F9;
-}
-</style>`;
-*/
-
-
 document.querySelectorAll('img[src="../img/roundcornerslt.jpg"]').forEach((item) => { 
   item.style.display = 'none';
   item.parentElement.style.borderTop = '1px solid var(--border)'
@@ -150,24 +163,28 @@ if (document.querySelector('#HeskMsg') !== null){
 
     document.querySelector('.cke_wysiwyg_frame').contentWindow.document.querySelector('head').innerHTML += `
     <style>
+      ${styleRoot};
+
       .cke_editable {
-        background-color: #191f31;
-        color: rgba(255, 255, 255, 0.6);
+        background: var(--bgPrimary);
+        color: var(--fontColor);
       }
       .cke_editable div { /*Div de campo de codigo*/
-        background-color: #4a5571 !important;
+        background: var(--bgSecondary) !important;
         border-color: ${vCorPadrao} !important;
       }
-      *::-webkit-scrollbar-track { background-color: #4a5571; }
-      *::-webkit-scrollbar { width: 5px; background: #4a5571; }
+      *::-webkit-scrollbar-track { background: var(--bgSecondary); }
+      *::-webkit-scrollbar { width: 5px; background: var(--bgSecondary); }
       *::-webkit-scrollbar-thumb { background:  ${vCorPadrao}; }
       *::-webkit-scrollbar-corner { background: ${vCorPadrao}; }
       .marker{
-        background: #910a4e ;
+        background: var(--yellow) ;
+        padding: 0 2px;
+        color: var(--redDark) !important;
       }
       code{
-        color: #ff48b6 !important;
-        background-color: #242a3d !important;
+        color: var(--pink) !important;
+        background: var(--bgTertiary) !important;
       }
 
       .cke_panel_listItem a{
@@ -180,13 +197,14 @@ if (document.querySelector('#HeskMsg') !== null){
         document.querySelector('.cke_panel_frame').contentWindow.onload = 
         document.querySelector('.cke_panel_frame').contentWindow.document.querySelector('head').innerHTML += `
         <style>
+          ${styleRoot};
     
           html, body, p {
-            background-color: #191f31;
-            color: rgba(255, 255, 255, 0.6);
+            background: var(--bgPrimary);
+            color: var(--fontColor);
           }
-          *::-webkit-scrollbar-track { background-color: #4a5571; }
-          *::-webkit-scrollbar { width: 5px; background: #4a5571; }
+          *::-webkit-scrollbar-track { background-color: var(--bgPrimary); }
+          *::-webkit-scrollbar { width: 5px; background: var(--bgPrimary); }
           *::-webkit-scrollbar-thumb { background:  ${vCorPadrao}; }
           *::-webkit-scrollbar-corner { background: ${vCorPadrao}; }
           .cke_panel_listItem.cke_selected a{
@@ -196,29 +214,38 @@ if (document.querySelector('#HeskMsg') !== null){
             border-color: var(--border) !important;
           }
           .cke_panel_grouptitle{
-            background: #1f2639;
+            background: var(--bgPrimary);
             color: rgba(255, 255, 255, 0.6);
             box-shadow:none;
           }
           .cke_panel_listItem a {
             border-color: var(--border) !important;
             &:hover{
-              background: #4a5571;
+              background: var(--bgPrimary);
             }
           }
           #cke_69, #cke_70, #cke_84{
             display:none; 
           }
-          .marker{
-            background: #910a4e ;
-          }
           #cke_77 div {/*Div de campo de codigo*/
-              background-color: #4a5571 !important;
+              background-color: var(--bgComent) !important;
               border-color: ${vCorPadrao} !important;
-          }
+          }            
           code{
-            color: #ff48b6 !important;
-            background-color: #242a3d !important;
+            color: var(--pink) !important;
+            background: var(--bgTertiary) !important;
+          }
+          .marker{
+            background: var(--yellow) ;
+            padding: 0 2px;
+            color: var(--redDark) !important;
+          }
+          .cke_editable div { /*Div de campo de codigo*/
+            background: var(--bgSecondary) !important;
+            border-color: ${vCorPadrao} !important;
+          }
+          .cke_panel_listItem.cke_selected a {
+              background: var(--bgTertiary) !important;
           }
         </style>`;
       });
