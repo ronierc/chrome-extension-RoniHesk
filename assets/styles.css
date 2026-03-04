@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
 :root {
     --bgPrimary: #191f31;
     --bgPrimaryRGB: 72, 85, 113;
@@ -32,7 +30,7 @@
 
 [data-bs-theme=light] {
     --bgPrimary: #efeeee;
-    --bgPrimaryRGB: 255, 255, 255;
+    --bgPrimaryRGB: 239, 238, 238;
     --bgSecondary: #dee2e6;
     --bgTertiary: #d1dceb ;
     --corBtn: #31d2f2;
@@ -376,6 +374,10 @@ table.white {
     color: var(--fontColor) !important;
 }
 
+table.white > tbody > tr:nth-of-type(odd) {
+    background: var(--bgTertiary) !important;
+}
+
 table.white th {
     background: transparent !important;
     border: var(--border) 1px solid !important;
@@ -485,6 +487,11 @@ a.cke_combo_button {
 
 .cke_toolbar_separator {
     display: none !important;
+}
+
+.cke_wysiwyg_frame, .cke_wysiwyg_div {
+    background: var(--bgPrimary) !important;
+    color: var(--fontColor) !important;
 }
 
 .cke_combo_off a.cke_combo_button:active, 

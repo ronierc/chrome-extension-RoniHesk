@@ -24,7 +24,8 @@ let vCorPadrao = '#bd93f9';
         --pink: #d63384;
         --yellow: #FFEB3B;
       } `;
-  } else {
+  } 
+  if(configUser.tema == 'dark'){
     styleRoot = `
       :root {
         --bgPrimary: #363b3f;
@@ -80,7 +81,7 @@ function substituirCores() {
         corDeFundo === 'rgb(226, 226, 226)' || corDeFundo === '#E2E2E2' ||
         corDeFundo === 'rgb(243, 243, 243)' || corDeFundo === '#F3F3F3' ||
         corDeFundo === 'rgb(231, 231, 231)' || corDeFundo === '#e7e7e7') {
-          elemento.style.background = 'var(--bgTertiary)';
+          elemento.style.background = 'var(--bgSecondary)';
           elemento.style.color = 'var(--fontColor) !important';
       }
       if ( //Fundos verde
@@ -165,9 +166,14 @@ if (document.querySelector('#HeskMsg') !== null){
     <style>
       ${styleRoot};
 
+        html, body, p, .cke_wysiwyg_frame, .cke_wysiwyg_div {
+          background: transparent !important;
+          color: var(--fontColor) !important;
+        }
+
       .cke_editable {
-        background: var(--bgPrimary);
-        color: var(--fontColor);
+        background: transparent !important;
+        color: var(--fontColor) !important;
       }
       .cke_editable div { /*Div de campo de codigo*/
         background: var(--bgSecondary) !important;
@@ -199,9 +205,9 @@ if (document.querySelector('#HeskMsg') !== null){
         <style>
           ${styleRoot};
     
-          html, body, p {
-            background: var(--bgPrimary);
-            color: var(--fontColor);
+          html, body, p, .cke_wysiwyg_frame, .cke_wysiwyg_div {
+            background: transparent !important;
+            color: var(--fontColor) !important;
           }
           *::-webkit-scrollbar-track { background-color: var(--bgPrimary); }
           *::-webkit-scrollbar { width: 5px; background: var(--bgPrimary); }
