@@ -11,6 +11,8 @@ const troca = {
   '../img/E.png': 'https://img.icons8.com/?size=20&id=dKMGP5XqWxob&format=png',
   '../img/D.png': 'https://img.icons8.com/?size=20&id=IchwUEgoxNcw&format=png',
   '../img/AT.png': 'https://img.icons8.com/?size=20&id=GOX0rYS9vb7n&format=png',
+  '../img/I.png': 'https://img.icons8.com/?size=20&id=FFWqzOLsEvso&format=png',
+  '../img/horario.png': 'https://img.icons8.com/?size=15&id=CcnMefzl28xf&format=png'
 };
 
 //Seleciona as img para trocar

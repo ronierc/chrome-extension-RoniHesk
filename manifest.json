@@ -40,7 +40,7 @@
       "runAt": "document_end"
     },
     {
-      "matches": ["https://suporte.suprasys.com.br/intranet/admin/new_ticket*", "https://suporte.suprasys.com.br/intranet/admin/nova_ficha*"],
+      "matches": ["https://suporte.suprasys.com.br/intranet/admin/new_ticket*", "https://suporte.suprasys.com.br/intranet/admin/nova_ficha*", "https://suporte.suprasys.com.br/intranet/admin/controlar_fichas.php*"],
       "js": ["/assets/selectEmpresa.js"],
       "runAt": "document_end"
     },
@@ -51,7 +51,7 @@
     },
     {
       "matches": ["https://suporte.suprasys.com.br/intranet/admin/admin_ticket.php?track=*"],
-      "js": ["/assets/js/imgs.js"],
+      "js": ["/assets/js/imgs.js","/assets/js/chamado.js"],
       "runAt": "document_end"
     }
   ]

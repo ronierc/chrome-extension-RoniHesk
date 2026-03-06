@@ -7,6 +7,7 @@
     --corBtn :#31d2f2;
     --corBtnHover :#017586;
     --bgComent: #6272A4;
+    --bgComentRGB: 98,114,164;
     --fontColor: rgba(255, 255, 255, 0.8);
     --fontColor2: #9B9B9B;
     --fontColorHover: #495057;
@@ -41,7 +42,8 @@
     --bgTertiary: #d1dceb ;
     --corBtn: #31d2f2;
     --corBtnHover: #017586;
-    --bgComent: #6272A4;
+    --bgComent: #bcc8d9;    
+    --bgComentRGB: 188,200,217;
     --fontColor: #4a5571;
     --fontColor2: #000;
     --fontColorHover: #495057;
@@ -95,7 +97,7 @@
 } 
 */
 .table-striped > tbody > tr:nth-of-type(odd) {
-    box-shadow: inset 0 0 0 9999px rgba(var(--bgPrimaryRGB), 0.1);
+    box-shadow: inset 0 0 0 9999px rgba(var(--bgComentRGB), 0.2);
 }
 
 .table > thead > tr > td.warning2{
