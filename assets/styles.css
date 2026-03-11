@@ -26,7 +26,7 @@
     --pxBarra: 5px;
     --pink: #e685b5;
     --yellow: #FFEB3B;
-
+    --yellowClaro: #FF9; 
 }
 
 [data-bs-theme=light] {
@@ -56,7 +56,8 @@
     --redDark: #c01068;
     --pxBarra: 5px;
     --pink: #d63384;
-    --yellow: #FFEB3B;    
+    --yellow: #FFEB3B;
+    --yellowClaro: #FF9;    
 }
 
 .light {
@@ -269,10 +270,15 @@ table.header td {
     padding: 0 10px 0 0;
 }
 
-td.andamento,
+td.andamento {
+    /*Aguardando resposta*/
+    background: var(--yellowClaro) !important;
+    /* border-color: var(--purple) !important; */
+    border: none !important;
+}
 td.admin_critical {
     /*Aguardando resposta*/
-    background-color: rgba(var(--purpleRgb), .6) !important;
+    background: rgba(var(--purpleRgb), .6) !important;
     /* border-color: var(--purple) !important; */
     border: none !important;
 }
@@ -305,9 +311,32 @@ div.success {
     align-items: center;
     margin-left: 10px;
     border: 1px solid #4a5571;
-    border-radius: 4px;
+    border-radius: 4px 0 0 4px;
     padding: 0 10px;
     background: var(--bgTertiary);
+}
+.chMenu2 {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    text-align: left;
+    border: 1px solid #4a5571;
+    border-radius: 0 4px 4px 0;
+    padding: 0 10px;
+    font-size: 0.8em;
+    background: var(--bgTertiary);
+}
+#interacoesTicket {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-rows: 23px auto;
+    grid-auto-flow: column;
+    max-height: 360px;
+    overflow-y: scroll;
+    border: 1px solid var(--corPadrao);
+    padding: 10px;
+}
+div#view2 {
+    height: 360px;
 }
 
 .inputMenu {
@@ -533,11 +562,13 @@ span.cke_path_empty {
 
 .resolved, .success, #fichaobrigatoria_resultado { color: var(--green) !important; }
 
-.open, .error, .rate, .important, .assignedyou, .red { color: var(--red) !important; }
+.error, .important, .assignedyou,
+.rate, /*O cliente não leu esta resposta ainda*/
+.open, /*Chamado Novo */
+.waitingreply, /*Aquardando Resposta*/
+.red { color: var(--red) !important; }
 
 .analysis, .notice, .medium { color: var(--orange) !important; }
-
-.waitingreply { color: var(--bgPrimary) !important; }
 
 .replied { color: var(--blue) !important; }
 

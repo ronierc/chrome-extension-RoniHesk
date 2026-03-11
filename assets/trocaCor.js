@@ -107,15 +107,16 @@ function substituirCores() {
       if (
         corDaBorda === 'rgb(209, 220, 235)' || corDaBorda === '#d1dceb' ||
         corDaBorda === 'rgb(204, 204, 204)' || corDaBorda === '#CCCCCC' ||
-        corDaBorda === 'rgb(221, 221, 221)' || corDaBorda === '#DDDDDD'
+        corDaBorda === 'rgb(221, 221, 221)' || corDaBorda === '#DDDDDD' ||
+        corDaBorda === 'rgb(243, 243, 243)' || corDaBorda === '#f3f3f3'
         ) {
-          elemento.style.borderColor = 'var(--border)';
+          elemento.style.borderColor = 'var(--border) !important';
       }
       if ( //Bordas verde
         corDaBorda === 'rgb(0, 102, 0)' || corDaBorda === '#006600' ||
         corDaBorda === 'rgb(24, 118, 15)' || corDaBorda === '#18760f' ||
         corDaBorda === 'rgb(178, 219, 161)' || corDaBorda === '#b2dba1' ) {
-          elemento.style.borderColor = '#50FA7B';
+          elemento.style.borderColor = 'var(--green) !important';
       }
       if (corDaFonte === 'rgb(74, 85, 113)' || corDaFonte === '#4a5571' ||
           corDaFonte === 'rgb(0, 0, 0)' || corDaFonte === '#000000') {
