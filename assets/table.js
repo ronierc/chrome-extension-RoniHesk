@@ -42,6 +42,22 @@ if ((document.getElementById('cke_message') == null) && document.querySelector('
     }
   })
 
+  
+document.querySelectorAll('form[name="form1"] p').forEach((item) => { /**Adicionar class ao conteiner do chamado - protocoloc */
+  let texto = item.innerText.trim();  
+  item.children[0].removeAttribute("style");  
+  
+  if (texto.includes('Status: Novo')) {
+      item.children[0].classList.add('open');
+  }
+  if (texto.includes('Status: Respondido')) {
+      item.children[0].classList.add('replied');        
+  }
+  if (texto.includes('Status: Em Análise')) {
+      item.children[0].classList.add('analysis');        
+  }
+});
+
   //Tabela de Chamados
   document.querySelectorAll('table.white td:first-child').forEach((item) => { item.style.display = 'none'; }); //Remove o check de seleção
   document.querySelectorAll('table.white th:first-child').forEach((item) => { item.style.display = 'none'; }); //Remove o check de seleção

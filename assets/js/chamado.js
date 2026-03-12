@@ -99,9 +99,10 @@ document.head.appendChild(linkTag);
 // Seleciona e adiciona o evento
 document.querySelectorAll('.chMenu').forEach(function (elemento) {
     elemento.addEventListener('click', function () {
-        copiarHTML(elemento.lastChild);
+        copiarHTML(document.querySelector('#chMenu'));
     });
 });
+console.log(document.querySelector('#chMenu').innerHTML);
 
 // Função de cópia
 function copiarHTML(elemento) {
@@ -109,6 +110,7 @@ function copiarHTML(elemento) {
     const blob = new Blob([conteudoHTML], { type: 'text/html' });
     const clipboardItem = new ClipboardItem({ 'text/html': blob });
 
+    console.log(elemento);
     navigator.clipboard.write([clipboardItem])
         .then(() => {
             // Adiciona a classe de destaque

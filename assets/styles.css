@@ -26,7 +26,7 @@
     --pxBarra: 5px;
     --pink: #e685b5;
     --yellow: #FFEB3B;
-    --yellowClaro: #FF9; 
+    --yellowClaro: #f1fa8c; 
 }
 
 [data-bs-theme=light] {
@@ -488,6 +488,7 @@ ul.tabs li.selected a {
     max-height: 82vh;
     padding: 10px 30px;
     font-size: 1em;
+    z-index: 2;
 }
 
 .jumbHelp img {
