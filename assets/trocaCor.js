@@ -54,7 +54,7 @@ function substituirCores() {
   var elementos = document.getElementsByTagName('*');
   
   
-  // Itera sobre todos os elementos
+  // Itera sobre todos os elementos 
   for (var i = 0; i < elementos.length; i++) {
       var elemento = elementos[i];
       
@@ -62,10 +62,6 @@ function substituirCores() {
       var corDeFundo = window.getComputedStyle(elemento, null).getPropertyValue('background-color');
       var corDaBorda = window.getComputedStyle(elemento, null).getPropertyValue('border-color');
       var corDaFonte = window.getComputedStyle(elemento, null).getPropertyValue('color');
-      if (corDeFundo === 'rgb(255, 255, 255)' || corDeFundo === '#FFFFFF') {
-          elemento.style.background = 'var(--bgPrimary)';
-          elemento.style.color = 'var(--fontColor) !important';
-      }
       if (
         corDeFundo === 'rgb(245, 255, 250)' || corDeFundo === '#f5fffa' || 
         corDeFundo === 'rgb(196, 243, 255)' || corDeFundo === '#C4F3FF' || 
@@ -87,23 +83,6 @@ function substituirCores() {
           elemento.style.background = 'var(--bgSecondary)';
           elemento.style.color = 'var(--fontColor) !important';
       }
-      if ( //Fundos verde
-        corDeFundo === 'rgb(221, 255, 221)' || corDeFundo === '#DDFFDD' ||
-        corDeFundo === 'rgb(153, 255, 153)' || corDeFundo === '#99FF99' ||
-        corDeFundo === 'rgb(233, 255, 219)' || corDeFundo === '#e9ffdb' ||
-        corDeFundo === 'rgb(200, 229, 188)' || corDeFundo === '#c8e5bc' ||
-        corDeFundo === 'rgb(153, 255, 102)' || corDeFundo === '#99FF66' ||
-        corDeFundo === 'rgb(223, 240, 216)' || corDeFundo === '#dff0d8') {
-          elemento.style.background = 'var(--green)';
-          elemento.style.color = 'var(--fontColor) !important';
-      }
-      if (
-        corDeFundo === 'rgb(255, 255, 153)' || corDeFundo === '#FFFF99' ||
-        corDeFundo === 'rgb(251, 249, 238)' || corDeFundo === '#fbf9ee') {
-          elemento.style.background = 'var(--corPadrao)';
-          elemento.style.color = 'var(--bgSecondary) !important';
-          elemento.style.borderColor = 'var(--bgComent)';
-      }
       if (
         corDaBorda === 'rgb(209, 220, 235)' || corDaBorda === '#d1dceb' ||
         corDaBorda === 'rgb(204, 204, 204)' || corDaBorda === '#CCCCCC' ||
@@ -111,12 +90,6 @@ function substituirCores() {
         corDaBorda === 'rgb(243, 243, 243)' || corDaBorda === '#f3f3f3'
         ) {
           elemento.style.borderColor = 'var(--border) !important';
-      }
-      if ( //Bordas verde
-        corDaBorda === 'rgb(0, 102, 0)' || corDaBorda === '#006600' ||
-        corDaBorda === 'rgb(24, 118, 15)' || corDaBorda === '#18760f' ||
-        corDaBorda === 'rgb(178, 219, 161)' || corDaBorda === '#b2dba1' ) {
-          elemento.style.borderColor = 'var(--green) !important';
       }
       if (corDaFonte === 'rgb(74, 85, 113)' || corDaFonte === '#4a5571' ||
           corDaFonte === 'rgb(0, 0, 0)' || corDaFonte === '#000000') {

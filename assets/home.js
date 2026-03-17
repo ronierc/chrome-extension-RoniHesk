@@ -1,9 +1,9 @@
 //If abaixo valida se esta na home. 
-if ((document.getElementById('cke_message') == null) && document.querySelector('form[name="showt"]') !== null){
+if ((document.getElementById('cke_message') == null) && document.querySelector('form[name="showt"]') !== null) {
 
-  //Remove a o~pção altera todos os chamados para resolvido
+  //Remove a o~pção altera todos os chamados para resolvido 
   document.querySelector('select[name="a"]').parentElement.parentElement.style.display = 'none';
-  
+
   document.querySelectorAll('br').forEach((item) => { item.remove(); });
 
   //Captura a div Mostrar Tickets e já remove
@@ -15,7 +15,7 @@ if ((document.getElementById('cke_message') == null) && document.querySelector('
   document.querySelector('select[name="sel_suporte"]').parentElement.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
 
   //Captura a div buscar chamados e já remove
-    document.querySelector('#topSubmit2').style.display = 'none'
+  document.querySelector('#topSubmit2').style.display = 'none'
   document.querySelector('#divShow2').style.display = 'block'
   const achat = document.querySelector('form[name="findby"]').parentElement.innerHTML;
   document.querySelector('form[name="findby"]').parentElement.parentElement.parentElement.parentElement.style.display = 'none';
@@ -42,21 +42,21 @@ if ((document.getElementById('cke_message') == null) && document.querySelector('
   </div>
 `;
 
-document.getElementById('closeJumbotron').addEventListener('click', () => {
-  document.querySelector('#jbBusca').style.display = 'none';
-});
-document.getElementById('mostraTicket').addEventListener('click', () => {
-  document.querySelector('#jbBusca').style.display = 'block';
-  document.querySelector('#jbBusca div').innerHTML = showt;
-});
-document.getElementById('buscaTicket').addEventListener('click', () => {
-  document.querySelector('#jbBusca').style.display = 'block';
-  document.querySelector('#jbBusca div').innerHTML = buscat;
-});
-document.getElementById('achaTicket').addEventListener('click', () => {
-  document.querySelector('#jbBusca').style.display = 'block';
-  document.querySelector('#jbBusca div').innerHTML = achat;
-});
+  document.getElementById('closeJumbotron').addEventListener('click', () => {
+    document.querySelector('#jbBusca').style.display = 'none';
+  });
+  document.getElementById('mostraTicket').addEventListener('click', () => {
+    document.querySelector('#jbBusca').style.display = 'block';
+    document.querySelector('#jbBusca div').innerHTML = showt;
+  });
+  document.getElementById('buscaTicket').addEventListener('click', () => {
+    document.querySelector('#jbBusca').style.display = 'block';
+    document.querySelector('#jbBusca div').innerHTML = buscat;
+  });
+  document.getElementById('achaTicket').addEventListener('click', () => {
+    document.querySelector('#jbBusca').style.display = 'block';
+    document.querySelector('#jbBusca div').innerHTML = achat;
+  });
 
 
 

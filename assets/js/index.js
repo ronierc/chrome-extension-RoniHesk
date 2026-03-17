@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const configUser = await window.initStorage();
   if (!configUser) return;
 
-  // Estado inicial
+  // Estado inicial 
   root.style.setProperty('--corPadrao', configUser.corPadrao);
 
   const selectOwner = document.querySelector('#owner');

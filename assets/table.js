@@ -10,7 +10,7 @@ if ((document.getElementById('cke_message') == null) && document.querySelector('
     let t1 = new Date(str1[2], str1[1]-1, str1[0]); //Coloca a data na ordem certa
     let t2 = '';
     
-    if(d2 == null || d2 == ''){ //Se não receber a data 2, pega a data do dia
+    if(d2 == null || d2 == ''){ //Se não receber a data 2, pega a data do dia 
         t2 = new Date();
     } else {
         str2 = d2.split('/');
@@ -45,7 +45,8 @@ if ((document.getElementById('cke_message') == null) && document.querySelector('
   
 document.querySelectorAll('form[name="form1"] p').forEach((item) => { /**Adicionar class ao conteiner do chamado - protocoloc */
   let texto = item.innerText.trim();  
-  item.children[0].removeAttribute("style");  
+  item.children[0].removeAttribute("style"); 
+  item.classList.add('titleAgrup'); 
   
   if (texto.includes('Status: Novo')) {
       item.children[0].classList.add('open');
@@ -55,6 +56,9 @@ document.querySelectorAll('form[name="form1"] p').forEach((item) => { /**Adicion
   }
   if (texto.includes('Status: Em Análise')) {
       item.children[0].classList.add('analysis');        
+  }
+  if (texto.includes('Status: Resolvido')) {
+      item.children[0].classList.add('resolved');        
   }
 });
 

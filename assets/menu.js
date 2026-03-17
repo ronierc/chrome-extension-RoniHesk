@@ -14,12 +14,11 @@ document.querySelectorAll('table.header td').forEach((item) => {
   }
 });
 
-document.querySelector('.header').parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.style.padding = 0;
 const menu = document.querySelector('.header').parentNode.parentNode.parentNode.parentNode.parentNode;
-menu.style.position = 'fixed';
-menu.style.width = '100%';
-menu.style.top = 0;
-menu.style.zIndex = 10;
+menu.parentNode.style.padding = 0;
+menu.removeAttribute("style");
+menu.classList.add('menu');
+// menu.style.background = 'var(--bgPrimary)'; 
 
 var menuLinks = [];
 document.querySelectorAll('table.header table td a').forEach((item) => {
@@ -105,10 +104,3 @@ document.querySelector('table.header table tbody tr').innerHTML += `
   </div>
 </td>
 `;
-
-
-// Seleciona o elemento :root
-const root = document.documentElement;
-
-// Define o novo valor da variável
-// root.style.setProperty('--pxBarra', configUser.tamanhoBarra);

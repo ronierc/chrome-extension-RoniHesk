@@ -7,7 +7,7 @@ imgCadFicha.innerHTML = `
   Cadastrar Ficha
 </button>` ;
 
-// Fazer paginação quebrar a linha
+// Fazer paginação quebrar a linha 
 const paginacao = document.querySelector('.pgoff').parentElement;
 paginacao.style.display = 'flex';
 paginacao.style.flexWrap = 'wrap';
