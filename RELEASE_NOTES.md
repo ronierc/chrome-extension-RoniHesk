@@ -65,13 +65,36 @@ Versão 4.5
 3.1. Quando clicado para copiar agora a copia sera concatenada com o TITLE da página:
 ![image](https://github.com/user-attachments/assets/04ea8697-fdf8-4527-b3f1-6c51c0b46cb5)
 
-
+-------------
 5. Incluído na Abertuda do Chamado e na Criação da Ficha um input de busca da empresa. (Facilitar na busca)
 ![image](https://github.com/user-attachments/assets/fa19aecb-7a8b-4a2d-8127-8111f79e1056)
 
-6. Resolvido o Bug de quando respondido o chamado o header perde o nome:
+5.1. Resolvido o Bug de quando respondido o chamado o header perde o nome:
 ![image](https://github.com/user-attachments/assets/4a25c5cc-ae03-4662-ad99-addef34e2293)
 
-7. Quando chamado vai aparecer no Title o CH e Quando SL continua como estava:
+5.2. Quando chamado vai aparecer no Title o CH e Quando SL continua como estava:
 ![image](https://github.com/user-attachments/assets/152fc91d-853c-4de9-ba39-122677f34081)
+
+-------------
+Versão 6.0
+1. Agora o controle dos temas e Equipe é feito pela própria extensão:
+<img width="435" alt="image" src="https://github.com/user-attachments/assets/0bbb7406-e1a2-488f-80d8-583e4cf5ce4d" />
+
+2. Incluído tema Light e a cor escolhida muda o Tema:
+<img width="1080" alt="image" src="https://github.com/user-attachments/assets/f268586e-a0b1-40b1-8ab3-79b2b4dfdedf" />
+
+3. Informações do chamado agora acompanham no topo para facilitar quando estiver respondendo uma mensagem:
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/bd4eb877-97aa-49f3-ad26-e80e1270ea9d" />
+
+4. Quando rolado Scrool o nome do Agrupamento e Header da tabela acompanha a rolagem:
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/24e1835b-c12e-4804-b5a3-436a27a7c856" />
+
+5. Alterado os Icones de Diversas partes do site:
+<img width="220" height="62" alt="image" src="https://github.com/user-attachments/assets/a8ebceb4-cd4f-4cd7-ac35-b2a6050cdbc9" />
+
+6. Movido o Histórico do Ticket para dentro das Interações:
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/941c59f9-56cc-4912-9665-80a7718f2e01" />
+
+7. Melhorias nas cores de componentes de Texto:
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/f74a9607-3719-437f-aac9-c815659e07d0" />
 
