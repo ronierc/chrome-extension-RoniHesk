@@ -74,6 +74,9 @@ if (telaChamado) {
     nomeEmpresa = document.querySelector('img[src="img/telefone_empresa.png"]')?.parentElement?.children[0]?.innerText.replace('(Implantação)', '') || '';
     assunto = document.querySelector('h3.red')?.innerText.trim() || '';
     solicitante = document.querySelectorAll('.protocolo td')[23]?.innerText.trim() || '';
+    let limite = 40;
+    let assuntoLimitado = assunto.length > limite ? assunto.substring(0, limite) + "..." : assunto;
+
 
     icone = FAVICON_CHAMADO;
 
@@ -100,7 +103,7 @@ if (telaChamado) {
         <div class="chMenu2">
             <span>Emp:</span><span> ${nomeEmpresa}</span>
             <span>Slc:</span><span> ${solicitante}</span>
-            <span>Ass:</span><span> ${assunto}</span>
+            <span>Ass:</span><span title="${assunto}"> ${assuntoLimitado}</span>
         </div>
     `;
     }

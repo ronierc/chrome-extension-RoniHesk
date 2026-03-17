@@ -6,7 +6,7 @@
     --corBtn :#31d2f2;
     --corBtnHover :#017586;
     --bgComent: #6272A4;
-    --bgComentMix: color-mix(in srgb, var(--bgComent) 60%, var(--bgSecondary));
+    --bgComentMix: color-mix(in srgb, var(--bgComent) 30%, white);
     --fontColor: rgba(255, 255, 255, 0.8);
     --fontColor2: #9B9B9B;
     --fontColorHover: #495057;
