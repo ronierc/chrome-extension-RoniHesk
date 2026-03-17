@@ -18,7 +18,6 @@ const menu = document.querySelector('.header').parentNode.parentNode.parentNode.
 menu.parentNode.style.padding = 0;
 menu.removeAttribute("style");
 menu.classList.add('menu');
-// menu.style.background = 'var(--bgPrimary)'; 
 
 var menuLinks = [];
 document.querySelectorAll('table.header table td a').forEach((item) => {

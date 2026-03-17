@@ -105,6 +105,16 @@ if (telaChamado) {
     `;
     }
 
+    /* Quando prioridade baixa. Ajusta o Amarelo da Linha */
+    const prioriBaixa = document.querySelector('#PrioridadeOK').parentElement.parentElement;
+    prioriBaixa.classList.add('PrioridadeOK');
+
+    // Converte os filhos em uma lista e percorre cada um deles
+    Array.from(prioriBaixa.children).forEach(filho => {
+        filho.removeAttribute("bgcolor");
+        filho.removeAttribute("style");
+    });
+
 }
 
 // Copia numero da solicitação para o header

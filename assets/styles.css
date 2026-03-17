@@ -2,7 +2,6 @@
     --corPadrao: #BD93F9;
     --corPadraoMix: color-mix(in srgb, var(--corPadrao) 80%, white);
     --bgPrimary: #191f31;
-    --bgPrimaryRGB: 72, 85, 113;
     --bgPrimaryMix: color-mix(in srgb, var(--bgPrimary) 60%, white);
     --bgSecondary: #1f2639;
     --bgSecondaryMix: color-mix(in srgb, var(--bgSecondary) 93%, white);
@@ -11,7 +10,6 @@
     --corBtn: #31d2f2;
     --corBtnHover: #017586;
     --bgComent: #6272A4;
-    --bgComentRGB: 98,114,164;
     --bgComentMix: color-mix(in srgb, var(--bgComent) 60%, var(--bgSecondary));
     --fontColor: rgba(255, 255, 255, 0.8);
     --fontColor2: #9B9B9B;
@@ -38,7 +36,6 @@
     --corPadrao: #BD93F9;
     --corPadraoMix: color-mix(in srgb, var(--corPadrao) 80%, white); 
     --bgPrimary: #efeeee;
-    --bgPrimaryRGB: 239, 238, 238;
     --bgPrimaryMix: color-mix(in srgb, var(--bgPrimary) 60%, white);
     --bgSecondary: #dee2e6;
     --bgSecondaryMix: color-mix(in srgb, var(--bgSecondary) 93%, black);
@@ -46,8 +43,7 @@
     --bgTertiaryMix: color-mix(in srgb, var(--bgTertiary) 60%, white);
     --corBtn: #31d2f2;
     --corBtnHover: #017586;
-    --bgComent: #bcc8d9;    
-    --bgComentRGB: 188,200,217;
+    --bgComent: #bcc8d9;
     --bgComentMix: color-mix(in srgb, var(--bgComent) 60%, white);
     --fontColor: #4a5571;
     --fontColor2: #000;
@@ -218,6 +214,10 @@ input[type="image"] {
     border: none !important;
 }
 
+.PrioridadeOK{
+    background: var(--corPadrao);
+}
+
 .roundcornerstop {
     background: transparent !important;
     border-top: 1px solid var(--border) !important;
@@ -264,7 +264,7 @@ div#view2 {
     text-shadow: none !important;
 
     &::hover {
-        box-shadow: inset 0 0 0 9999px rgba(var(--bgPrimaryRGB), 0.5);
+        background: var(--bgPrimaryMix) !important;
     }
 }
 
@@ -278,7 +278,7 @@ div#view2 {
 
 .dropdown-menu>li>a:hover,
 .dropdown-menu>li>a:focus {
-    box-shadow: inset 0 0 0 9999px rgba(var(--bgPrimaryRGB), 0.5) !important;
+    background: var(--bgPrimaryMix) !important;
 }
 
 .table-hover>tbody>tr:hover>td,
@@ -313,6 +313,10 @@ div#view2 {
     z-index: 2;
 }
 
+td {
+    color: var(--fontColor) !important;
+}
+
 table.white {
     background: var(--bgSecondary) !important;
     /*color: var(--fontColor) !important;
@@ -336,9 +340,14 @@ td.admin_white,td.admin_gray{
 table.white > tbody > tr:first-child:first-child{
     background: var(--bgComentMix) !important;
     position: sticky;
-    top: 83px;
+    top: 60px;
     z-index: 2;
 }
+
+form[name="form1"] table.white > tbody > tr:first-child:first-child{
+    top: 83px;
+}
+
 table.white > tbody > tr:first-child:first-child > th{ /*Cabeçalho Tabela*/
     border-bottom: 2px solid var(--corPadrao);
 }
@@ -351,7 +360,6 @@ table.white > tbody > tr:nth-of-type(odd) { /*Cor alternada Tabela*/
 
 table.white tr:hover {
     background: var(--bgComentMix) !important;
-    /* box-shadow: inset 0 0 0 9999px rgba(var(--bgSecondaryRGB), 0.5) !important; */
 }
 
 td.admin_gray tr:hover {
@@ -407,7 +415,7 @@ table.header td {
     padding: 0 10px 0 0;
 }
 
-td.andamento {
+.andamento {
     /*Aguardando resposta*/
     background: var(--yellowClaro) !important;
     color: var(--redDark) !important; 
@@ -631,10 +639,9 @@ h1 { color: var(--green) !important; }
     width: 25px;
 }
 .optionWhiteOFF {
-    background: var(--bgPrimary) !important;
+    background: var(--bgPrimaryMix) !important;
     color: var(--fontColor) !important;
     border: none !important;
-    box-shadow: inset 0 0 0 9999px rgba(var(--bgPrimaryRGB), 0.5);
     width: 25px;
 }
 .optionBlueON {
@@ -643,8 +650,7 @@ h1 { color: var(--green) !important; }
     width: 25px;
 }
 .optionBlueOFF {
+    background: var(--bgPrimaryMix) !important;
     border: none !important;
-    background: var(--bgPrimary) !important;
-    box-shadow: inset 0 0 0 9999px rgba(var(--bgPrimaryRGB), 0.5);
     width: 25px;
 }

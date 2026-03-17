@@ -91,16 +91,6 @@ function substituirCores() {
         ) {
           elemento.style.borderColor = 'var(--border) !important';
       }
-      if (corDaFonte === 'rgb(74, 85, 113)' || corDaFonte === '#4a5571' ||
-          corDaFonte === 'rgb(0, 0, 0)' || corDaFonte === '#000000') {
-          elemento.style.color = 'var(--fontColor) !important';//'#cfcfcf';
-      }
-      if (corDaFonte === 'rgb(0, 0, 153)' || corDaFonte === '#000099') {
-          elemento.style.color = 'var(--corPadrao)';//'#cfcfcf';
-      }
-      if (corDaFonte === 'rgb(238 238 238)' || corDaFonte === '#EEEEEE') {
-          elemento.style.color = 'var(--corPadrao)';//'#cfcfcf';
-      }
   }
   // console.log(elementos)
 }

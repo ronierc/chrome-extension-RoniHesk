@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 :root {
     --bgPrimary: #191f31;
-    --bgPrimaryRGB: 72,85,113;
     --bgSecondary: #1f2639;
     --bgTertiary: #4a5571;
     --corBtn :#31d2f2;
     --corBtnHover :#017586;
     --bgComent: #6272A4;
-    --bgComentRGB: 98,114,164;
+    --bgComentMix: color-mix(in srgb, var(--bgComent) 60%, var(--bgSecondary));
     --fontColor: rgba(255, 255, 255, 0.8);
     --fontColor2: #9B9B9B;
     --fontColorHover: #495057;
@@ -37,13 +36,12 @@
 
 [data-bs-theme=light] {
     --bgPrimary: #efeeee;
-    --bgPrimaryRGB: 255, 255, 255;
     --bgSecondary: #dee2e6;
     --bgTertiary: #d1dceb ;
     --corBtn: #31d2f2;
     --corBtnHover: #017586;
     --bgComent: #bcc8d9;    
-    --bgComentRGB: 188,200,217;
+    --bgComentMix: color-mix(in srgb, var(--bgComent) 60%, var(--bgSecondary));
     --fontColor: #4a5571;
     --fontColor2: #000;
     --fontColorHover: #495057;
@@ -97,7 +95,7 @@
 } 
 */
 .table-striped > tbody > tr:nth-of-type(odd) {
-    box-shadow: inset 0 0 0 9999px rgba(var(--bgComentRGB), 0.2);
+    background: var(--bgComentMix) !important;
 }
 
 .table > thead > tr > td.warning2{
