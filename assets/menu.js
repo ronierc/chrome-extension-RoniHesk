@@ -85,7 +85,7 @@ document.querySelector('table.header table tbody tr').innerHTML += `
     <a type="button" class="btn btn-default inputMenu" href="new_ticket.php" style="padding: 6px 12px;font-size: 14px;">Abrir Chamado</a>
   </div>
 </td>
-<td width="175px">
+<td width="160px">
   <form action="find_tickets.php" method="get" id="findby" style="margin: 0;">
     <div class="input-group">
       <input type="text" class="form-control inputMenu" placeholder="Nº Chamado" name="q" id="q">

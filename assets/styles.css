@@ -248,6 +248,7 @@ div#view2 {
     background: var(--bgPrimary) !important;
     text-shadow: none !important;
     color: var(--fontColor) !important;
+    font-size: 11px !important;
 }
 
 .itemMenu {
@@ -469,6 +470,9 @@ div.success {
     padding: 0 10px;
     font-size: 0.8em;
     background: var(--bgTertiary);
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: clamp(10px, 2vw, 10px);
 }
 #interacoesTicket {
     display: grid !important;
