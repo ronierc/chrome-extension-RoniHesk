@@ -82,7 +82,7 @@ document.querySelector('table.header table tbody tr').innerHTML += `
         <li id="recadoNovo">${recadoNovo}</li>
       </ul>
     </div>
-    <a type="button" class="btn btn-default inputMenu" href="new_ticket.php" style="padding: 6px 12px;font-size: 14px;">Abrir Chamado</a>
+    <a type="button" class="btn btn-default inputMenu" href="new_ticket.php" style="padding-top: 9px;">Abrir Chamado</a>
   </div>
 </td>
 <td width="160px">
