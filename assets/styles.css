@@ -6,7 +6,7 @@
     --bgSecondary: #1f2639;
     --bgSecondaryMix: color-mix(in srgb, var(--bgSecondary) 93%, white);
     --bgTertiary: #4a5571;
-    --bgTertiaryMix: color-mix(in srgb, var(--bgTertiary) 60%, white);
+    --bgTertiaryMix: color-mix(in srgb, var(--bgTertiary) 60%, black);
     --corBtn: #31d2f2;
     --corBtnHover: #017586;
     --bgComent: #6272A4;
@@ -14,7 +14,9 @@
     --fontColor: rgba(255, 255, 255, 0.8);
     --fontColor2: #9B9B9B;
     --fontColorHover: #495057;
-    --fontFamily: 'Nunito', sans-serif;
+    --fontFamily: 'Nunito', sans-serif;    
+    --gray: #4a5571;
+    --grayMix: color-mix(in srgb, var(--gray) 90%, white);
     --border: #4a5571;
     --purple: #BD93F9;
     --purpleRgb: 189, 147, 249;
@@ -49,6 +51,8 @@
     --fontColor2: #000;
     --fontColorHover: #495057;
     --fontFamily: 'Nunito', sans-serif;
+    --gray: #d1dceb;
+    --grayMix: color-mix(in srgb, var(--gray) 90%, black);
     --border: #d1dceb;
     --purple: #BD93F9;
     --purpleRgb: 189, 147, 249;
@@ -305,7 +309,7 @@ div#view2 {
 }
 
 .titleAgrup{
-    background: var(--corPadrao) !important;
+    background: var(--gray) !important;
     margin: 0;
     padding: 4px;
     border-top: solid 1px var(--bgTertiary);
@@ -323,9 +327,9 @@ table.white {
     /*color: var(--fontColor) !important;
      border-collapse: separate !important; */
 }
-table.white th {
+table.white th { /*Cabeçalho Tabela*/
     border-color: var(--border) !important;
-    background: var(--corPadraoMix) !important;
+    background: var(--grayMix) !important;
     color: var(--fontColor) !important;
 }
 table.white th a{
@@ -338,7 +342,7 @@ td.admin_white,td.admin_gray{
     color: var(--fontColor) !important;
 }
 
-table.white > tbody > tr:first-child:first-child{
+table.white > tbody > tr:first-child:first-child{ 
     background: var(--bgComentMix) !important;
     position: sticky;
     top: 60px;

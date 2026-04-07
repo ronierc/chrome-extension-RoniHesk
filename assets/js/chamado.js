@@ -118,6 +118,11 @@ if (telaChamado) {
         filho.removeAttribute("style");
     });
 
+    /** Deixa a hora do chamado em Azul */
+    document.querySelectorAll('#tktTable table table tr').forEach((item) => {
+        item.children[1].children[0].classList.add('replied');
+    });
+
 }
 
 // Copia numero da solicitação para o header
