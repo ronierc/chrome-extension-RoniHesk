@@ -101,7 +101,10 @@
 
 .texto-data div {
     /*Flexa solicitação*/
-    color: var(--bgSecondary) !important;
+    color: var(--fontColor) !important;
+}
+#area_solicitacao div:first-of-type, #area_solicitacao div table {
+    background: var(--bgSecondary) !important;
 }
 
 #barrabuttom,
@@ -625,19 +628,15 @@ h1 { color: var(--green) !important; }
     background: var(--bgTertiary) !important;
     color: var(--fontColor) !important;
 }
-.ticketalt div div {
-    background-color: #4a5571 !important;
-    border-color: var(--corPadrao) !important;
-}
 .ticketrow { /* Mensagem Chamado */
     background: var(--bgSecondary) !important;
     color: var(--fontColor) !important;
     border: 1px dotted var(--bgTertiary) !important;
 }
-.ticketrow div div {
-    /*Div de campo de codigo*/
-    background-color: var(--bgPrimary) !important;
+.ticketalt div div , .ticketrow div div {
+    background-color: var(--bgComent) !important;
     border-color: var(--corPadrao) !important;
+    color: var(--fontColor) !important;
 }
 
 .optionWhiteON {
