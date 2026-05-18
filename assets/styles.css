@@ -70,6 +70,10 @@
     --yellowClaro: #FF9;   
 }
 
+.d-flex {
+    display: flex;
+}
+
 .light {
     --green: #23D1AE;
     --greenDark: #167e69;
@@ -100,7 +104,7 @@
 }
 
 .texto-data div {
-    /*Flexa solicitação*/
+    /*Flexa solicitaÃ§Ã£o*/
     color: var(--fontColor) !important;
 }
 #area_solicitacao div:first-of-type, #area_solicitacao div table {
@@ -307,7 +311,7 @@ div#view2 {
 }
 
 .texto-data {
-    /*Cor flexinha solicitação*/
+    /*Cor flexinha solicitaÃ§Ã£o*/
     color: #4a5571 !important;
 }
 
@@ -330,7 +334,7 @@ table.white {
     /*color: var(--fontColor) !important;
      border-collapse: separate !important; */
 }
-table.white th { /*Cabeçalho Tabela*/
+table.white th { /*CabeÃ§alho Tabela*/
     border-color: var(--border) !important;
     background: var(--grayMix) !important;
     color: var(--fontColor) !important;
@@ -356,7 +360,7 @@ form[name="form1"] table.white > tbody > tr:first-child:first-child{
     top: 83px;
 }
 
-table.white > tbody > tr:first-child:first-child > th{ /*Cabeçalho Tabela*/
+table.white > tbody > tr:first-child:first-child > th{ /*CabeÃ§alho Tabela*/
     border-bottom: 2px solid var(--corPadrao);
 }
 
@@ -609,7 +613,7 @@ span.cke_path_empty {
 .resolved, .success, #fichaobrigatoria_resultado { color: var(--green) !important; }
 
 .error, .important, .assignedyou,
-.rate, /*O cliente não leu esta resposta ainda*/
+.rate, /*O cliente nÃ£o leu esta resposta ainda*/
 .open, /*Chamado Novo */
 .waitingreply, /*Aquardando Resposta*/
 .red { color: var(--red) !important; }
@@ -660,4 +664,57 @@ h1 { color: var(--green) !important; }
     background: var(--bgPrimaryMix) !important;
     border: none !important;
     width: 25px;
+}
+
+.font{
+  background:linear-gradient(90deg,var(--corPadrao), color-mix(in srgb, var(--corPadrao) 60%, var(--fontColor)),color-mix(in srgb, var(--corPadrao) 20%, var(--fontColor)));
+  background-size:300%;
+  background-clip:text;
+  color:#0000;
+  animation:a 8s linear infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.image-astro {
+  content: "";                      /* Obrigatório para o pseudo-elemento existir */
+  display: inline-block;            /* Permite definir largura e altura */
+  width: 30px;                     /* Ajuste a largura conforme necessário */
+  height: 30px;                    /* Ajuste a altura conforme necessário */
+  background-image: url('https://www.suprasys.com.br/static/img/home/fg_astronauta.png');
+  background-size: contain;         /* Garante que a imagem inteira apareça */
+  background-repeat: no-repeat;     /* Impede que a imagem se repita */
+  background-position: center;      /* Centraliza a imagem no espaço */
+  animation: flutuar 4s ease-in-out infinite;
+  position: relative;
+  z-index: 0;
+  background-color: transparent !important;
+}
+
+@keyframes a{
+  to{
+    background-position:300%
+  }
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(-3deg);
+  }
+
+  25% {
+    transform: translateY(-5px) translateX(5px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) translateX(0px) rotate(3deg);
+  }
+
+  75% {
+    transform: translateY(-5px) translateX(-5px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(-3deg);
+  }
 }
